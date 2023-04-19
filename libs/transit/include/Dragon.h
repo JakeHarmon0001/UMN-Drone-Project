@@ -103,6 +103,12 @@ class Dragon : public IEntity {
   void Rotate(double angle);
 
   /**
+   * @brief Gets the nearest entity in the scheduler
+   * @param scheduler Vector containing all the entities in the system
+   */
+  void GetNearestEntity(std::vector<IEntity*> scheduler);
+
+  /**
    * @brief Removing the copy constructor and assignment operator
    * so that Dragons cannot be copied.
    */
@@ -118,6 +124,8 @@ class Dragon : public IEntity {
   float speed;
   bool available;
   std::string strategyName;
+  IEntity* nearestEntity = nullptr;
+  IEntity* prevEntity = nullptr;
   IStrategy* toFinalDestination = nullptr;
   std::string color;
 };
