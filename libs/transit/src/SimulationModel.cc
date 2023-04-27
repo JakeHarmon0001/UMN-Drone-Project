@@ -2,8 +2,8 @@
 
 #include "DroneFactory.h"
 #include "RobotFactory.h"
-#include "HelicopterFactory.h"
 #include "HumanFactory.h"
+#include "HelicopterFactory.h"
 #include "DragonFactory.h"
 
 SimulationModel::SimulationModel(IController& controller)
@@ -11,8 +11,8 @@ SimulationModel::SimulationModel(IController& controller)
   compFactory = new CompositeFactory();
   AddFactory(new DroneFactory());
   AddFactory(new RobotFactory());
-  AddFactory(new HelicopterFactory());
   AddFactory(new HumanFactory());
+  AddFactory(new HelicopterFactory());
   AddFactory(new DragonFactory());
 }
 
@@ -33,9 +33,10 @@ void SimulationModel::CreateEntity(JsonObject& entity) {
   std::string name = entity["name"];
   JsonArray position = entity["position"];
   std::cout << name << ": " << position << std::endl;
+
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
-  
+
   // Call AddEntity to add it to the view
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
@@ -52,7 +53,7 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
     JsonObject detailsTemp = entity->GetDetails();
     std::string nameTemp = detailsTemp["name"];
     std::string typeTemp = detailsTemp["type"];
-    if (name.compare(nameTemp) == 0 && typeTemp.compare("robot") == 0  &&
+    if (name.compare(nameTemp) == 0 && typeTemp.compare("robot") == 0 &&
         entity->GetAvailability()) {
       std::string strategyName = details["search"];
       entity->SetDestination(Vector3(end[0], end[1], end[2]));
@@ -67,7 +68,11 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
 /// Updates the simulation
 void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
-    entities[i]->Update(dt, scheduler);
+    if(entities[i]->getType() == "dragon"){
+      entities[i]->Update(dt, entities);
+    } else {
+      entities[i]->Update(dt, scheduler);
+    }
     controller.UpdateEntity(*entities[i]);
   }
 }

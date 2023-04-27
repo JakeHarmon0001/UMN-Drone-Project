@@ -7,7 +7,7 @@
 #include "Human.h"
 
 /**
- *@brief HumanFactory Factory to Human class.
+ *@brief Human Factory to produce Human class.
  **/
 class HumanFactory : public IEntityFactory {
  public:

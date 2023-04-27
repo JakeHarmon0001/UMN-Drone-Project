@@ -13,7 +13,7 @@ void PathStrategy::Move(IEntity* entity, double dt) {
   entity->SetPosition(entity->GetPosition() + dir*entity->GetSpeed()*dt);
   entity->SetDirection(dir);
 
-  if (entity->GetPosition().Distance(vi) < 1)
+  if (entity->GetPosition().Distance(vi) < 4)
     index++;
 }
 

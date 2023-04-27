@@ -1,5 +1,6 @@
 ../../build/libs/libtransit.a/src/Dragon.o: src/Dragon.cc \
- include/Dragon.h include/IEntity.h ../../libs/routing/include/graph.h \
+ include/Dragon.h include/IController.h include/IEntity.h \
+ ../../libs/routing/include/graph.h \
  ../../libs/routing/include/routing_strategy.h \
  ../../libs/routing/include/graph.h \
  ../../libs/routing/include/distance_function.h \
@@ -89,6 +90,8 @@
  include/BeelineStrategy.h
 
 include/Dragon.h:
+
+include/IController.h:
 
 include/IEntity.h:
 

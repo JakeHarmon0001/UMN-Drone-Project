@@ -109,6 +109,8 @@ class Robot : public IEntity {
    */
   void Rotate(double angle);
 
+  std::string getType() const {return "robot"; }
+
  private:
   JsonObject details;
   Vector3 position;

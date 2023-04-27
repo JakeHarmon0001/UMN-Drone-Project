@@ -89,9 +89,9 @@
  ../../dependencies/include/picojson.h \
  ../../dependencies/include/picojson.h include/Drone.h \
  include/IStrategy.h include/IController.h include/Robot.h \
- include/DroneFactory.h include/RobotFactory.h \
- include/HelicopterFactory.h include/Helicopter.h include/HumanFactory.h \
- include/Human.h include/DragonFactory.h include/Dragon.h
+ include/DroneFactory.h include/RobotFactory.h include/HumanFactory.h \
+ include/Human.h include/HelicopterFactory.h include/Helicopter.h \
+ include/DragonFactory.h include/Dragon.h
 
 include/SimulationModel.h:
 
@@ -291,13 +291,13 @@ include/DroneFactory.h:
 
 include/RobotFactory.h:
 
-include/HelicopterFactory.h:
-
-include/Helicopter.h:
-
 include/HumanFactory.h:
 
 include/Human.h:
+
+include/HelicopterFactory.h:
+
+include/Helicopter.h:
 
 include/DragonFactory.h:
 

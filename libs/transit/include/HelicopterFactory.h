@@ -1,5 +1,5 @@
-#ifndef HELICOPTER_FACTORY_H_
-#define HELICOPTER_FACTORY_H_
+#ifndef Helicopter_FACTORY_H_
+#define Helicopter_FACTORY_H_
 
 #include <vector>
 

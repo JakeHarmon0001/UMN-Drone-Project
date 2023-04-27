@@ -68,9 +68,7 @@
         </div>
     </div>
     <div><input type="button" value="Schedule Trip" onclick="schedule()"></div>
-    <div style="margin-top: 10px;"><input type="button" value="Add Helicopters" onclick="addHelicopter()"></div>
-    <div style="margin-top: 10px;"><input type="button" value="Add Humans" onclick="addHuman()"></div>
-    <div style="margin-top: 10px;"><input type="button" value="Add Dragons" onclick="addDragon()"></div>
+    <div><input type="button" value="Add Human" onclick="addHuman()" style="margin-top: 10px;"></div>
 
     <div id="nameError"></div>
 
@@ -81,8 +79,6 @@
         var trip = [];
 
         var helicopterID = 1;
-        var humanID = 1;
-        var dragonID = 1;
 
         // This method is called when the document is loaded
         $(document).ready(function () {
@@ -125,6 +121,7 @@
         function schedule() {
             var errorDiv = document.getElementById("nameError");
             var searchStrat = document.getElementById("search-strategy").value;
+            //var searchStrat = "beeline";
             errorDiv.innerHTML = "";
             var name = $("#name").val();
             if (name == "") {
@@ -169,54 +166,23 @@
                 $("#name").val("");
             }
         }
-        function addHuman(){
+        var humanID = 1;
+        function addHuman() {
             api.sendCommand("CreateEntity", {
                 "type": "human",
-                "name": "Human"+humanID,
+                "name": "Human-" + humanID,
                 "mesh": "assets/model/human.glb",
-                "position": [498.292, 270, -228.623],
+                "position": [700, 290, 400],
                 "scale": [0.005, 0.005, 0.005],
                 "rotation": [0, 0, 0, 0],
-                "direction": [1,0,0],
+                "direction": [1, 0, 0],
                 "speed": 10.0,
                 "radius": 1.0,
                 "start": 2.0,
                 "duration": 2.0,
-                "offset": [0, -0.5, 0] 
+                "offset": [0, -0.5, 0]
             });
             humanID += 1;
-        }
-        function addDragon(){
-            api.sendCommand("CreateEntity", {
-                "type": "dragon",
-                "name": "Dragon"+dragonID,
-                "mesh": "assets/model/dragon2.glb",
-                "position": [498.292, 300, -228.623],
-                "scale": [1, 1, 1],
-                "rotation": [0, 0, 0, 0],
-                "direction": [1,0,0],
-                "speed": 60.0,
-                "radius": 1.0,
-                "start": 2.0,
-                "duration": 2.0,
-                "offset": [0, 0.6, 0]
-            });
-            dragonID += 1;
-        }
-        function addHelicopter(){
-            api.sendCommand("CreateEntity", {
-                "type": "helicopter",
-                "name": "Helicopter"+helicopterID,
-                "mesh": "assets/model/helicopter.glb",
-                "position": [550,290,-228.62299999999999],
-                "scale": [0.015, 0.015, 0.015],
-                "rotation": [0, 0, 0, 0],
-                "direction": [1,0,0],
-                "speed": 50.0,
-                "offset": [0, 0.6, 0],
-                "duration": 2.0 
-            });
-            helicopterID += 1;
         }
     </script>
 </body>

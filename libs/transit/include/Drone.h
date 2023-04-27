@@ -119,6 +119,8 @@ class Drone : public IEntity {
    */
   void Jump(double height);
 
+  std::string getType() const {return "drone"; }
+
   /**
    * @brief Removing the copy constructor and assignment operator
    * so that drones cannot be copied.

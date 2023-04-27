@@ -1,5 +1,5 @@
-#ifndef DRAGON_FACTORY_H_
-#define DRAGON_FACTORY_H_
+#ifndef Dragon_FACTORY_H_
+#define Dragon_FACTORY_H_
 
 #include <vector>
 
