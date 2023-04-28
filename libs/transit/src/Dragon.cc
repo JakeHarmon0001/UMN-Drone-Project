@@ -5,6 +5,7 @@
 #include <limits>
 
 #include "BeelineStrategy.h"
+#include "HungerDecorator.h"
 
 Dragon::Dragon(JsonObject& obj) : details(obj) {
   std::cout << "new dragon" << std::endl;
@@ -14,6 +15,8 @@ Dragon::Dragon(JsonObject& obj) : details(obj) {
   direction = {dir[0], dir[1], dir[2]};
 
   speed = obj["speed"];
+
+  hungerLevel = 0;
 }
 
 Dragon::~Dragon() {
@@ -22,8 +25,16 @@ Dragon::~Dragon() {
 }
 
 void Dragon::CreateNewDestination() {
-    destination = {Random(-1400, 1500), position.y, Random(-800, 800)};
-    toDestination = new BeelineStrategy(position, destination);
+  if(toDestination){
+    delete toDestination;
+  }
+  double tempx = Random(-1400, 1500);
+  double tempz = Random(-800, 800);
+  std::cout << "x: " << tempx << " z: " << tempz << std::endl;
+  destination = {tempx, position.y, tempz};
+  this->setSpeed(25);
+  toDestination = new HungerDecorator(new BeelineStrategy(position, destination));
+  std::cout << "setting new toDestination" << std::endl;
 }
 
 void Dragon::Rotate(double angle) {
@@ -34,7 +45,8 @@ void Dragon::Rotate(double angle) {
 
 void Dragon::GetNearestEntity(std::vector<IEntity *> scheduler){
   // std::cout << "dragon getnearestentity" << std::endl;
-  float maxRange = 999999;
+  float maxRange = 400;
+  IEntity* tempnearestEntity = nullptr;
   for (auto entity : scheduler)
   {
     // std::string val = entity->GetDetails()["type"];
@@ -46,16 +58,18 @@ void Dragon::GetNearestEntity(std::vector<IEntity *> scheduler){
       float disToEntity = this->position.Distance(entity->GetPosition());
       if (disToEntity <= maxRange){
         maxRange = disToEntity;
-        nearestEntity = entity;
+        tempnearestEntity = entity;
       }
     }
   }
 
-  if (nearestEntity)
+  if (tempnearestEntity)
   {
+    nearestEntity = tempnearestEntity;
     available = false; // dragon unavailable because close entity found
     destination = nearestEntity->GetPosition();
-    toDestination = new BeelineStrategy(position, destination);
+    this->setSpeed(50);
+    toDestination = new HungerDecorator(new BeelineStrategy(position, destination));
   }
 }
 
@@ -64,32 +78,43 @@ void Dragon::addController(IController* controller){
 }
 
 void Dragon::Update(double dt, std::vector<IEntity*> scheduler) {
+  // std::cout << dt << std::endl;
   if(available){ //roaming
+  std::cout << "isAvailable" << std::endl;
+  // std::cout << "available" << std::endl;
     if(toDestination) {
         if(toDestination->IsCompleted()) {
+          std::cout << "getting new destination" << std::endl;
             CreateNewDestination();
         } else { //getnearestentity
-             this->GetNearestEntity(scheduler); // scan for drone
+            setHungerLevel(getHungerLevel() + dt/2);
             toDestination->Move(this, dt);
+            this->GetNearestEntity(scheduler); // scan for drone
         }
     } else {
+      std::cout << "newdestination2" << std::endl;
         CreateNewDestination();
     }
   } else { // pursuit
+  // std::cout << "not available" << std::endl;
     if(toDestination){
       if(this->position.Distance(nearestEntity->GetPosition()) < 10){
         nearestEntity->SetPosition({Random(-1400, 1500), position.y, Random(-800, 800)}); // move drone to new random location
+        // nearestEntity = nullptr;
+        std::cout << "close to drone" << std::endl;
         available = true; // dragon now roaming
-       CreateNewDestination();
+        std::cout << "newdestination1" << std::endl;
+        CreateNewDestination();
+        setHungerLevel(0);
       } else {
+        setHungerLevel(getHungerLevel() + dt);
         destination = nearestEntity->GetPosition();
         delete toDestination;
-        toDestination = new BeelineStrategy(position, destination);
+        toDestination = new HungerDecorator(new BeelineStrategy(position, destination));
         toDestination->Move(this,dt);
       }
       
     }
-    
   }
     
 }

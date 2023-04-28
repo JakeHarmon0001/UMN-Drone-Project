@@ -70,7 +70,7 @@
             "type": "dragon",
             "name": "Dragon",
             "mesh": "assets/model/dragon2.glb",
-            "position": [200.292, 550, -500.623],
+            "position": [200.292, 350, -500.623],
             "scale": [1.5, 1.5, 1.5],
             "rotation": [0, 0, 0, 0],
             "direction": [1,0,0],

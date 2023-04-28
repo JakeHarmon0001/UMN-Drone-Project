@@ -157,9 +157,14 @@ class IEntity {
 
   virtual std::string getType() const = 0;
 
+  virtual double getHungerLevel() { return 0; };
+
+  virtual void setHungerLevel(double newHunger) {};
+
  protected:
   int id;
   const IGraph* graph;
+  double hungerLevel;
 };
 
 #endif

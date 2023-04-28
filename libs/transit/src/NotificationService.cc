@@ -19,7 +19,7 @@ class NotificationService : public Subscriber {
     JsonObject notification;
     notification["event"] = "observe";
     notification["details"] = currMessage;
-    sendMessage(notification.ToString()); 
+    // sendMessage(notification.ToString()); 
   }
 
 };
