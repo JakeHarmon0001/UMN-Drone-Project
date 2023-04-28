@@ -157,14 +157,25 @@ class IEntity {
 
   virtual std::string getType() const = 0;
 
-  virtual double getHungerLevel() { return 0; };
+  virtual double getHungerLevel() const { return 0; };
 
   virtual void setHungerLevel(double newHunger) {};
+
+  virtual bool isDead() const { return dead; };
+
+  virtual void setDead(bool newDead) { dead = newDead; };
+
+  virtual IEntity* getterNearestEntity() const { return nullptr; }
+
+  virtual bool isPickedUp() const { return false; };
+
+  virtual void resetEntity() {};
 
  protected:
   int id;
   const IGraph* graph;
   double hungerLevel;
+  bool dead = false;
 };
 
 #endif

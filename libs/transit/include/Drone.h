@@ -128,6 +128,18 @@ class Drone : public IEntity {
   Drone(const Drone& drone) = delete;
   Drone& operator=(const Drone& drone) = delete;
 
+  void resetEntity() {
+    nearestEntity = nullptr;
+    toRobot = nullptr;
+    toFinalDestination = nullptr;
+    pickedUp = false;
+    available = true;
+  }
+
+  virtual IEntity* getterNearestEntity() const { return nearestEntity; }
+
+  virtual bool isPickedUp() const { return pickedUp; };
+
  private:
   JsonObject details;
   Vector3 position;

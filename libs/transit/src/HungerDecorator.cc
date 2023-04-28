@@ -20,7 +20,7 @@ bool HungerDecorator::IsCompleted(){
 
 void HungerDecorator::Move(IEntity* entity, double dt){
     if(!isDead() && entity->getType() == "dragon"){
-        if(entity->getHungerLevel() > 40){ 
+        if(entity->getHungerLevel() > 30){ 
             Vector3 temp = entity->GetPosition();
             if(temp[1] > 220){
                 temp[1] -= 0.6;

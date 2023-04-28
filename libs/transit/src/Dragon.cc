@@ -32,7 +32,7 @@ void Dragon::CreateNewDestination() {
   double tempz = Random(-800, 800);
   std::cout << "x: " << tempx << " z: " << tempz << std::endl;
   destination = {tempx, position.y, tempz};
-  this->setSpeed(25);
+  this->setSpeed(20);
   toDestination = new HungerDecorator(new BeelineStrategy(position, destination));
   std::cout << "setting new toDestination" << std::endl;
 }
@@ -68,7 +68,7 @@ void Dragon::GetNearestEntity(std::vector<IEntity *> scheduler){
     nearestEntity = tempnearestEntity;
     available = false; // dragon unavailable because close entity found
     destination = nearestEntity->GetPosition();
-    this->setSpeed(50);
+    this->setSpeed(35);
     toDestination = new HungerDecorator(new BeelineStrategy(position, destination));
   }
 }
@@ -98,14 +98,23 @@ void Dragon::Update(double dt, std::vector<IEntity*> scheduler) {
   } else { // pursuit
   // std::cout << "not available" << std::endl;
     if(toDestination){
-      if(this->position.Distance(nearestEntity->GetPosition()) < 10){
+      if(this->position.Distance(nearestEntity->GetPosition()) < 20){
+        if(nearestEntity->isPickedUp()) {
+          if(nearestEntity->getterNearestEntity()){
+            if(nearestEntity->getterNearestEntity()->getType() == "robot"){
+              nearestEntity->getterNearestEntity()->setDead(true);
+            }
+          }
+        }
         nearestEntity->SetPosition({Random(-1400, 1500), position.y, Random(-800, 800)}); // move drone to new random location
         // nearestEntity = nullptr;
+        nearestEntity->resetEntity();
         std::cout << "close to drone" << std::endl;
         available = true; // dragon now roaming
         std::cout << "newdestination1" << std::endl;
         CreateNewDestination();
         setHungerLevel(0);
+        
       } else {
         setHungerLevel(getHungerLevel() + dt);
         destination = nearestEntity->GetPosition();

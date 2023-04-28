@@ -74,6 +74,9 @@ void SimulationModel::Update(double dt) {
       entities[i]->Update(dt, scheduler);
     }
     controller.UpdateEntity(*entities[i]);
+    if(entities[i]->isDead()){
+      controller.RemoveEntity(entities[i]->GetId());
+    }
   }
 }
 
