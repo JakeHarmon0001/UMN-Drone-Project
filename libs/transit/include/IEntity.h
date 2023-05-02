@@ -182,7 +182,6 @@ class IEntity {
   double hungerLevel = 0;
   bool dead = false;
   Publisher* publisher;
-  
 };
 
 #endif

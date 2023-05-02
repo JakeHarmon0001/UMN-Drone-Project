@@ -108,3 +108,8 @@ void Dragon::Update(double dt, std::vector<IEntity*> scheduler) {
     }
   }
 }
+
+//void Dragon::changeMesh(string newMesh) {
+//  details["mesh"] = "assets/model/dragon_head.glb";
+//
+//}

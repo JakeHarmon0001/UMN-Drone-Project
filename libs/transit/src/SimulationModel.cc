@@ -84,7 +84,7 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
   controller.SendEventToView("TripScheduled", details);
 }
 
-/// Updates the simulation
+// Updates the simulation
 void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
     if(entities[i]->getType() == "dragon"){
@@ -96,22 +96,23 @@ void SimulationModel::Update(double dt) {
     if(entities[i]->isDead()){
       std::cout << "something is dead" << std::endl;
       if(entities[i]->getType() == "dragon") {
+        
         std::cout << entities[i]->GetId() << std::endl;
         std::cout << "identified dead entity as dragon" << std::endl;
-        //create skeleton
+        //create skeleton JsonArray arr = {9.0, "Hello", 1, JsonArray()};
         JsonObject details = entities[i]->GetDetails();
         details["type"] = "skeleton";
         details["name"] = "Skeleton";
-        details["mesh"] = "assets/model/dragon_head.glb";
-        // std::cout << "position before createEntity";
-        // std::cout << entities[i]->GetDetails()["position"] << std::endl;
-        // details["position"] = pos((entities[i]->GetDetails())["position"]);
+        details["mesh"] = "assets/model/squid_game_red_circle.glb"; 
+        Vector3 temp = entities[i]->GetPosition();
+        JsonArray jdon = {temp.x, temp.y, temp.z};
+        details["position"] = jdon;
+
         CreateEntity(details);
-        
       }
-      // std::cout << ""
       controller.RemoveEntity(entities[i]->GetId());
-      entities.erase(i);
+      entities.erase(entities.begin()+i);
+      i--;
     }
   }
 }
