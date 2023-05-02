@@ -94,25 +94,46 @@ void SimulationModel::Update(double dt) {
     }
     controller.UpdateEntity(*entities[i]);
     if(entities[i]->isDead()){
-      std::cout << "something is dead" << std::endl;
+      // std::cout << "something is dead" << std::endl;
+      
       if(entities[i]->getType() == "dragon") {
         
-        std::cout << entities[i]->GetId() << std::endl;
-        std::cout << "identified dead entity as dragon" << std::endl;
+        // std::cout << entities[i]->GetId() << std::endl;
+        // std::cout << "identified dead entity as dragon" << std::endl;
         //create skeleton JsonArray arr = {9.0, "Hello", 1, JsonArray()};
         JsonObject details = entities[i]->GetDetails();
         details["type"] = "skeleton";
         details["name"] = "Skeleton";
-        details["mesh"] = "assets/model/squid_game_red_circle.glb"; 
+        details["mesh"] = "assets/model/mario_movie_-_dry_bones.glb"; 
         Vector3 temp = entities[i]->GetPosition();
-        JsonArray jdon = {temp.x, temp.y, temp.z};
+        JsonArray jdon = {temp.x, temp.y + 42, temp.z};
         details["position"] = jdon;
-
+        JsonArray scale = {0.2, 0.2, 0.2};
+        details["scale"] = scale;
+   
         CreateEntity(details);
+
+        
       }
       controller.RemoveEntity(entities[i]->GetId());
       entities.erase(entities.begin()+i);
       i--;
+      // } else if(entities[i]->getType() == "robot"){ // reschedule the stranded robot
+      //   entities[i]->setDead(false);
+      //   entities[i]->SetAvailability(true);
+      //   JsonObject trip;
+      //   Vector3 dest = entities[i]->GetDestination();
+      //   JsonArray destarr = {dest.x, dest.y, dest.z};
+      //   Vector3 start = entities[i]->GetPosition();
+      //   JsonArray startarr = {start.x, start.y, start.z};
+      //   trip["name"] = entities[i]->GetDetails()["name"];
+      //   trip["start"] = startarr;
+      //   trip["end"] = destarr;
+      //   trip["search"] = entities[i]->GetStrategyName();
+      //   ScheduleTrip(trip);
+
+      // }
+      
     }
   }
 }

@@ -50,6 +50,9 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
     available = false;
     pickedUp = false;
 
+    publisher->setMessage(std::string(details["name"]) + ": Starting route to robot " + std::string(nearestEntity->GetDetails()["name"]) + "\n");
+    publisher->notify();
+
     destination = nearestEntity->GetPosition();
     Vector3 finalDestination = nearestEntity->GetDestination();
 
@@ -81,6 +84,8 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
       delete toRobot;
       toRobot = nullptr;
       pickedUp = true;
+      publisher->setMessage(std::string(details["name"]) + ": Picked up robot " + std::string(nearestEntity->GetDetails()["name"]) + "\n");
+      publisher->notify();
     }
   } else if (toFinalDestination) {
     toFinalDestination->Move(this, dt);
@@ -93,6 +98,8 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
     if (toFinalDestination->IsCompleted()) {
       delete toFinalDestination;
       toFinalDestination = nullptr;
+      publisher->setMessage( std::string(details["name"]) + ": Trip completed, dropped off " + std::string(nearestEntity->GetDetails()["name"]) + "\n");
+      publisher->notify();
       nearestEntity = nullptr;
       available = true;
       pickedUp = false;

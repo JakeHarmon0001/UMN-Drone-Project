@@ -20,7 +20,7 @@ bool HungerDecorator::IsCompleted(){
 
 void HungerDecorator::Move(IEntity* entity, double dt){
     if(!isDead() && entity->getType() == "dragon"){ //
-        if(entity->getHungerLevel() > 10){ 
+        if(entity->getHungerLevel() > 50){ 
             Vector3 temp = entity->GetPosition();
             if(temp[1] > 230){
                 // std::cout << "falling" << std::endl;
@@ -31,14 +31,20 @@ void HungerDecorator::Move(IEntity* entity, double dt){
                 if(!entity->isDead()){
                     entity->setDead(true);
                     dead = true;
-                    entity->GetPublisher()->setMessage("Dragon has died\n");
+                    entity->GetPublisher()->setMessage(std::string(entity->GetDetails()["name"]) + " has died\n");
                     entity->GetPublisher()->notify();
                     //entity->GetDetails()["mesh"] = new path
                 }
                 
                 //entity->SetColor("RED");
             }
-        } else {
+        }
+        // else if(entity->getHungerLevel() < 20) {
+        //     // entity->SetColor("0xffff00");
+        // }
+        // else if(entity->getHungerLevel() > 20 && entity->getHungerLevel() < 49) {
+        //     // entity->SetColor("0xff0000");
+        else {
             if(!strategy->IsCompleted()){ //keep moving
                 // std::cout << "normal move" << std::endl;
                 strategy->Move(entity, dt);

@@ -93,6 +93,8 @@ void Dragon::Update(double dt, std::vector<IEntity*> scheduler) {
           }
         }
         nearestEntity->SetPosition({Random(-1400, 1500), position.y, Random(-800, 800)}); // move drone to new random location
+        publisher->setMessage(std::string(details["name"]) + ": Killed " + std::string(nearestEntity->GetDetails()["name"]) + "\n");
+        publisher->notify();
         nearestEntity->resetEntity();
         available = true; // dragon now roaming
         CreateNewDestination();

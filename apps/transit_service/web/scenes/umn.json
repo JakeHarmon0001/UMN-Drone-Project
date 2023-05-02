@@ -72,7 +72,8 @@
                 0,
                 0.6,
                 0
-            ]
+            ],
+            "color": "ff"
         }
     },
     {
@@ -109,76 +110,6 @@
             "offset": [
                 0,
                 -0.5,
-                0
-            ]
-        }
-    },
-    {
-        "command": "CreateEntity",
-        "params": {
-            "type": "dragon",
-            "name": "Dragon",
-            "mesh": "assets/model/dragon2.glb",
-            "position": [
-                200.292,
-                350,
-                -500.623
-            ],
-            "scale": [
-                1.5,
-                1.5,
-                1.5
-            ],
-            "rotation": [
-                0,
-                0,
-                0,
-                0
-            ],
-            "direction": [
-                1,
-                0,
-                0
-            ],
-            "speed": 50.0,
-            "offset": [
-                0,
-                1.5,
-                0
-            ]
-        }
-    },
-    {
-        "command": "CreateEntity",
-        "params": {
-            "type": "skeleton",
-            "name": "Skeleton",
-            "mesh": "assets/model/squid_game_red_circle.glb",
-            "position": [
-                200.292,
-                400,
-                -500.623
-            ],
-            "scale": [
-                1.5,
-                1.5,
-                1.5
-            ],
-            "rotation": [
-                0,
-                0,
-                0,
-                0
-            ],
-            "direction": [
-                1,
-                0,
-                0
-            ],
-            "speed": 50.0,
-            "offset": [
-                0,
-                1.5,
                 0
             ]
         }
