@@ -6,6 +6,7 @@
 #include "graph.h"
 #include "math/vector3.h"
 #include "util/json.h"
+#include "Publisher.h"
 
 using namespace routing;
 
@@ -157,13 +158,13 @@ class IEntity {
 
   virtual std::string getType() const = 0;
 
-  virtual double getHungerLevel() const { return 0; };
+  virtual double getHungerLevel() const { return hungerLevel; };
 
-  virtual void setHungerLevel(double newHunger) {};
+  virtual void setHungerLevel(double newHunger) {hungerLevel = newHunger; };
 
   virtual bool isDead() const { return dead; };
 
-  virtual void setDead(bool newDead) { dead = newDead; };
+  virtual void setDead(bool newDead) { dead = newDead; };;;;;;;;;;
 
   virtual IEntity* getterNearestEntity() const { return nullptr; }
 
@@ -171,11 +172,17 @@ class IEntity {
 
   virtual void resetEntity() {};
 
+  virtual void SetPublisher(Publisher* newPub) { publisher = newPub; };;;;;;;;;
+
+  virtual Publisher* GetPublisher() { return publisher; };;;;;;;;;
+
  protected:
   int id;
   const IGraph* graph;
-  double hungerLevel;
+  double hungerLevel = 0;
   bool dead = false;
+  Publisher* publisher;
+  
 };
 
 #endif

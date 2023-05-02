@@ -87,11 +87,15 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/Drone.h \
- include/IStrategy.h include/IController.h include/Robot.h \
- include/DroneFactory.h include/RobotFactory.h include/HumanFactory.h \
- include/Human.h include/HelicopterFactory.h include/Helicopter.h \
- include/DragonFactory.h include/Dragon.h
+ ../../dependencies/include/picojson.h include/Publisher.h \
+ include/Subscriber.h include/Drone.h include/IStrategy.h \
+ include/IController.h include/Robot.h include/NotificationService.h \
+ ../../libs/routing/include/routing_api.h \
+ ../../libs/routing/include/graph_factory.h include/DroneFactory.h \
+ include/RobotFactory.h include/HumanFactory.h include/Human.h \
+ include/HelicopterFactory.h include/Helicopter.h include/DragonFactory.h \
+ include/Dragon.h include/SkeletonFactory.h include/Skeleton.h \
+ include/NotificationService.h include/Publisher.h
 
 include/SimulationModel.h:
 
@@ -279,6 +283,10 @@ include/util/json.h:
 
 ../../dependencies/include/picojson.h:
 
+include/Publisher.h:
+
+include/Subscriber.h:
+
 include/Drone.h:
 
 include/IStrategy.h:
@@ -286,6 +294,12 @@ include/IStrategy.h:
 include/IController.h:
 
 include/Robot.h:
+
+include/NotificationService.h:
+
+../../libs/routing/include/routing_api.h:
+
+../../libs/routing/include/graph_factory.h:
 
 include/DroneFactory.h:
 
@@ -302,3 +316,11 @@ include/Helicopter.h:
 include/DragonFactory.h:
 
 include/Dragon.h:
+
+include/SkeletonFactory.h:
+
+include/Skeleton.h:
+
+include/NotificationService.h:
+
+include/Publisher.h:

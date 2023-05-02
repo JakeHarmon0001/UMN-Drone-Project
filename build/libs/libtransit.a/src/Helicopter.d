@@ -86,8 +86,8 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/IStrategy.h \
- include/BeelineStrategy.h
+ ../../dependencies/include/picojson.h include/Publisher.h \
+ include/Subscriber.h include/IStrategy.h include/BeelineStrategy.h
 
 include/Helicopter.h:
 
@@ -270,6 +270,10 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 include/IStrategy.h:
 

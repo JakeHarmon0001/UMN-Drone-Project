@@ -5,6 +5,9 @@
 #include "HumanFactory.h"
 #include "HelicopterFactory.h"
 #include "DragonFactory.h"
+#include "SkeletonFactory.h"
+#include "NotificationService.h"
+#include "Publisher.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -14,6 +17,12 @@ SimulationModel::SimulationModel(IController& controller)
   AddFactory(new HumanFactory());
   AddFactory(new HelicopterFactory());
   AddFactory(new DragonFactory());
+  AddFactory(new SkeletonFactory());
+  
+  notifier = new NotificationService(controller);
+  publisher = new Publisher();
+  publisher->sub(notifier);
+  
 }
 
 SimulationModel::~SimulationModel() {
@@ -26,18 +35,28 @@ SimulationModel::~SimulationModel() {
   }
   delete graph;
   delete compFactory;
+  delete publisher;
 }
 
 void SimulationModel::CreateEntity(JsonObject& entity) {
+  std::cout << "creating entity" << std::endl;
+  // std::cout << "type: ";
+  // std::cout << entity["type"] << std::endl;
+  // std::cout << "name: ";
+  // std::cout << entity["name"] << std::endl;
+  std::cout << "position: ";
+  std::cout << entity["position"] << std::endl;
   std::string type = entity["type"];
   std::string name = entity["name"];
   JsonArray position = entity["position"];
   std::cout << name << ": " << position << std::endl;
-
+  
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
-
+  //assign publisher to each entity
+  myNewEntity->SetPublisher(publisher);
   // Call AddEntity to add it to the view
+  std::cout << "Controller adding entity" << std::endl;
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
 }
@@ -75,7 +94,24 @@ void SimulationModel::Update(double dt) {
     }
     controller.UpdateEntity(*entities[i]);
     if(entities[i]->isDead()){
+      std::cout << "something is dead" << std::endl;
+      if(entities[i]->getType() == "dragon") {
+        std::cout << entities[i]->GetId() << std::endl;
+        std::cout << "identified dead entity as dragon" << std::endl;
+        //create skeleton
+        JsonObject details = entities[i]->GetDetails();
+        details["type"] = "skeleton";
+        details["name"] = "Skeleton";
+        details["mesh"] = "assets/model/dragon_head.glb";
+        // std::cout << "position before createEntity";
+        // std::cout << entities[i]->GetDetails()["position"] << std::endl;
+        // details["position"] = pos((entities[i]->GetDetails())["position"]);
+        CreateEntity(details);
+        
+      }
+      // std::cout << ""
       controller.RemoveEntity(entities[i]->GetId());
+      entities.erase(i);
     }
   }
 }

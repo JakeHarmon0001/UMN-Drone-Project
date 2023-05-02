@@ -90,13 +90,13 @@ class Dragon : public IEntity {
 
   std::string getType() const {return "dragon"; }
 
-  void setHungerLevel(double newHunger){
-    hungerLevel = newHunger;
-  }
+  // void setHungerLevel(double newHunger){
+  //   hungerLevel = newHunger;
+  // }
   
-  double getHungerLevel() {
-    return hungerLevel;
-  }
+  // double getHungerLevel() {
+  //   return hungerLevel;
+  // }
 
   virtual void setSpeed(float speed) {
     this->speed = speed;
@@ -113,7 +113,7 @@ class Dragon : public IEntity {
   bool available;
   IEntity* nearestEntity = nullptr;
   IController* controller;
-   double hungerLevel;
+  double hungerLevel;
 };
 
 #endif

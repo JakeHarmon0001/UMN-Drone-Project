@@ -86,8 +86,9 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/Dragon.h \
- include/IController.h include/IStrategy.h
+ ../../dependencies/include/picojson.h include/Publisher.h \
+ include/Subscriber.h include/Dragon.h include/IController.h \
+ include/IStrategy.h
 
 include/DragonFactory.h:
 
@@ -272,6 +273,10 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 include/Dragon.h:
 

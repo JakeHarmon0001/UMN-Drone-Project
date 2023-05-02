@@ -86,7 +86,8 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/math/vector3.h
+ ../../dependencies/include/picojson.h include/Publisher.h \
+ include/Subscriber.h include/math/vector3.h
 
 include/HungerDecorator.h:
 
@@ -271,5 +272,9 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 include/math/vector3.h:

@@ -1,7 +1,8 @@
 #ifndef SUBSCRIBER_H_
 #define SUBSCRIBER_H_
 
-using namespace routing;
+#include <string>
+//using namespace routing;
 
 /**
  * @class Subscriber
@@ -11,10 +12,12 @@ using namespace routing;
  */
 class Subscriber {
  public:
+
+ Subscriber() : currMessage("NO EVENT") {};
   /**
    * @brief Updates the current message to be relayed.
    */
-  void update(std::string newEvent);
+  virtual void update(std::string newEvent);
 
  protected:
   std::string currMessage;

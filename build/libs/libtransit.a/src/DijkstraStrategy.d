@@ -87,8 +87,8 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h \
- ../../libs/routing/include/routing/dijkstra.h \
+ ../../dependencies/include/picojson.h include/Publisher.h \
+ include/Subscriber.h ../../libs/routing/include/routing/dijkstra.h \
  ../../libs/routing/include/routing/astar.h \
  ../../libs/routing/include/routing_strategy.h
 
@@ -277,6 +277,10 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 ../../libs/routing/include/routing/dijkstra.h:
 

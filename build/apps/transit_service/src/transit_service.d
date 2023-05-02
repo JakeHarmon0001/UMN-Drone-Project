@@ -90,10 +90,14 @@
  ../../libs/routing/include/bounding_box.h \
  ../../libs/transit/include/math/vector3.h \
  ../../libs/transit/include/util/json.h \
- ../../dependencies/include/picojson.h ../../libs/transit/include/Drone.h \
+ ../../dependencies/include/picojson.h \
+ ../../libs/transit/include/Publisher.h \
+ ../../libs/transit/include/Subscriber.h \
+ ../../libs/transit/include/Drone.h \
  ../../libs/transit/include/IStrategy.h \
  ../../libs/transit/include/IController.h \
  ../../libs/transit/include/Robot.h \
+ ../../libs/transit/include/NotificationService.h \
  ../../libs/routing/include/routing_api.h \
  ../../libs/routing/include/graph_factory.h
 
@@ -283,6 +287,10 @@
 
 ../../dependencies/include/picojson.h:
 
+../../libs/transit/include/Publisher.h:
+
+../../libs/transit/include/Subscriber.h:
+
 ../../libs/transit/include/Drone.h:
 
 ../../libs/transit/include/IStrategy.h:
@@ -290,6 +298,8 @@
 ../../libs/transit/include/IController.h:
 
 ../../libs/transit/include/Robot.h:
+
+../../libs/transit/include/NotificationService.h:
 
 ../../libs/routing/include/routing_api.h:
 

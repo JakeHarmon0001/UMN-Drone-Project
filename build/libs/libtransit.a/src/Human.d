@@ -85,8 +85,9 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/IStrategy.h \
- include/AstarStrategy.h include/PathStrategy.h
+ ../../dependencies/include/picojson.h include/Publisher.h \
+ include/Subscriber.h include/IStrategy.h include/AstarStrategy.h \
+ include/PathStrategy.h
 
 include/Human.h:
 
@@ -269,6 +270,10 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 include/IStrategy.h:
 
