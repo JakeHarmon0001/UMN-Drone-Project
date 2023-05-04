@@ -5,10 +5,17 @@
 #include "IEntity.h"
 #include "IStrategy.h"
 
+/**
+ * @class Dragon
+ * @brief Represents a dragon in a physical system.
+ *
+ * Subclass of IEntity that represents a dragon. Dragons 
+ * pursue drones and have hunger implemented.
+ */
 class Dragon : public IEntity {
  public:
   /**
-   * @brief Dragon are created with a name
+   * @brief Dragon are created with a JsonObject
    * @param obj JSON object containing the drone's information
    */
   Dragon(JsonObject& obj);
@@ -88,6 +95,10 @@ class Dragon : public IEntity {
    */
   void Rotate(double angle);
 
+  /**
+   * @brief returns type of dragon
+   * @return String "dragon"
+  */
   std::string getType() const {return "dragon"; }
 
   // void setHungerLevel(double newHunger){
@@ -98,6 +109,10 @@ class Dragon : public IEntity {
   //   return hungerLevel;
   // }
 
+  /**
+   * @brief Set speed of dragon
+   * @param speed Speed of dragon 
+  */
   virtual void setSpeed(float speed) {
     this->speed = speed;
    }

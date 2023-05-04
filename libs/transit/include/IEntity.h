@@ -123,14 +123,14 @@ class IEntity {
   virtual void SetPosition(Vector3 pos_) {}
 
   /**
-   *@brief Set the direction of the entity.
-   *@param dir_ The new direction of the entity.
+   * @brief Set the direction of the entity.
+   * @param dir_ The new direction of the entity.
    */
   virtual void SetDirection(Vector3 dir_) {}
 
   /**
-   *@brief Set the destination of the entity.
-   *@param des_ The new destination of the entity.
+   * @brief Set the destination of the entity.
+   * @param des_ The new destination of the entity.
    */
   virtual void SetDestination(Vector3 des_) {}
 
@@ -156,25 +156,64 @@ class IEntity {
     return ((float(rand()) / float(RAND_MAX)) * (Max - Min)) + Min;
   }
 
+  /**
+   * @brief Returns the type of the entity
+   * @return String value representing the type of the entity
+  */
   virtual std::string getType() const = 0;
 
+  /**
+   * @brief Returns the hungerLevel of the entity
+   * @return Double value representing the entities hunger level
+  */
   virtual double getHungerLevel() const { return hungerLevel; };
 
+  /**
+   * @brief Assigns a new value to hungerLevel 
+   * @param newHunger The new hungerLevel
+  */
   virtual void setHungerLevel(double newHunger) {hungerLevel = newHunger; };
 
+  /**
+   * @brief Returns true if the entity is dead
+   * @return True if entity is dead, false if not
+  */
   virtual bool isDead() const { return dead; };
 
+  /**
+   * @brief Sets the dead value of entity
+   * @param newDead New value of dead
+  */
   virtual void setDead(bool newDead) { dead = newDead; };;;;;;;;;;
 
+  /**
+   * @brief Gets the entity nearest to the current entity
+   * @return Entity closest to the current entity
+  */
   virtual IEntity* getterNearestEntity() const { return nullptr; }
 
+  /**
+   * @brief Returns true if entity is picked up
+   * @return Bool if entity is picked up
+  */
   virtual bool isPickedUp() const { return false; };
 
+  /**
+   * @brief Resets value of entity
+  */
   virtual void resetEntity() {};
 
-  virtual void SetPublisher(Publisher* newPub) { publisher = newPub; };;;;;;;;;
+  /**
+   * @brief Sets the publisher of entity
+   * @param newPub New publisher value
+  */
+  virtual void SetPublisher(Publisher* newPub) { publisher = newPub; };
 
-  virtual Publisher* GetPublisher() { return publisher; };;;;;;;;;
+  /**
+   * @brief Returns entities publisher
+   * @return Pointer to entities current publisher 
+  */
+  virtual Publisher* GetPublisher() { return publisher; };
 
  protected:
   int id;
