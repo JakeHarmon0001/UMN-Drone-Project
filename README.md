@@ -34,7 +34,7 @@ As a team we had a setup where our sprints consisted of many spread out, multipl
 # Links
 
 ## Youtube Video:
-LINK LINK LINK
+[Youtube video](https://youtu.be/vL4VMHbMucA)
 
 ## Dockerhub Repo:
 LINK LINK LINK
