@@ -9,7 +9,7 @@
  * @class Dragon
  * @brief Represents a dragon in a physical system.
  *
- * Subclass of IEntity that represents a dragon. Dragons 
+ * Subclass of IEntity that represents a dragon. Dragons
  * pursue drones and have hunger implemented.
  */
 class Dragon : public IEntity {
@@ -87,6 +87,10 @@ class Dragon : public IEntity {
    */
   void GetNearestEntity(std::vector<IEntity*> scheduler);
 
+  /**
+   * @brief Assigns the controller component of dragon
+   * @param controller the controller to be assigned
+   */
   void addController(IController* controller);
 
   /**
@@ -98,27 +102,16 @@ class Dragon : public IEntity {
   /**
    * @brief returns type of dragon
    * @return String "dragon"
-  */
-  std::string getType() const {return "dragon"; }
-
-  // void setHungerLevel(double newHunger){
-  //   hungerLevel = newHunger;
-  // }
-  
-  // double getHungerLevel() {
-  //   return hungerLevel;
-  // }
+   */
+  std::string getType() const { return "dragon"; }
 
   /**
    * @brief Set speed of dragon
-   * @param speed Speed of dragon 
-  */
-  virtual void setSpeed(float speed) {
-    this->speed = speed;
-   }
+   * @param speed Speed of dragon
+   */
+  virtual void setSpeed(float speed) { this->speed = speed; }
 
-
-  private:
+ private:
   JsonObject details;
   Vector3 position;
   Vector3 direction;

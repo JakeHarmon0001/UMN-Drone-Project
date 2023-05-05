@@ -1,6 +1,12 @@
 ../../build/libs/libtransit.a/src/NotificationService.o: \
  src/NotificationService.cc include/NotificationService.h \
- ../../dependencies/include/WebServer.h \
+ include/IController.h include/IEntity.h include/Publisher.h \
+ include/Subscriber.h ../../libs/routing/include/graph.h \
+ ../../libs/routing/include/routing_strategy.h \
+ ../../libs/routing/include/graph.h \
+ ../../libs/routing/include/distance_function.h \
+ ../../libs/routing/include/bounding_box.h include/math/vector3.h \
+ include/util/json.h ../../dependencies/include/WebServer.h \
  ../../dependencies/include/libwebsockets.h \
  ../../dependencies/include/lws_config.h \
  ../../dependencies/include/libwebsockets/lws-logs.h \
@@ -81,18 +87,33 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
+ ../../dependencies/include/picojson.h \
  ../../libs/routing/include/routing_api.h \
- ../../libs/routing/include/graph_factory.h \
- ../../libs/routing/include/graph.h \
- ../../libs/routing/include/routing_strategy.h \
- ../../libs/routing/include/distance_function.h \
- ../../libs/routing/include/bounding_box.h include/Subscriber.h \
- include/IController.h include/IEntity.h \
- ../../libs/routing/include/graph.h include/math/vector3.h \
- include/util/json.h ../../dependencies/include/picojson.h \
- include/Publisher.h
+ ../../libs/routing/include/graph_factory.h
 
 include/NotificationService.h:
+
+include/IController.h:
+
+include/IEntity.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
+
+../../libs/routing/include/graph.h:
+
+../../libs/routing/include/routing_strategy.h:
+
+../../libs/routing/include/graph.h:
+
+../../libs/routing/include/distance_function.h:
+
+../../libs/routing/include/bounding_box.h:
+
+include/math/vector3.h:
+
+include/util/json.h:
 
 ../../dependencies/include/WebServer.h:
 
@@ -256,30 +277,8 @@ include/NotificationService.h:
 
 ../../dependencies/include/picojson.h:
 
+../../dependencies/include/picojson.h:
+
 ../../libs/routing/include/routing_api.h:
 
 ../../libs/routing/include/graph_factory.h:
-
-../../libs/routing/include/graph.h:
-
-../../libs/routing/include/routing_strategy.h:
-
-../../libs/routing/include/distance_function.h:
-
-../../libs/routing/include/bounding_box.h:
-
-include/Subscriber.h:
-
-include/IController.h:
-
-include/IEntity.h:
-
-../../libs/routing/include/graph.h:
-
-include/math/vector3.h:
-
-include/util/json.h:
-
-../../dependencies/include/picojson.h:
-
-include/Publisher.h:

@@ -3,10 +3,10 @@
 
 #include <vector>
 
+#include "Publisher.h"
 #include "graph.h"
 #include "math/vector3.h"
 #include "util/json.h"
-#include "Publisher.h"
 
 using namespace routing;
 
@@ -159,61 +159,61 @@ class IEntity {
   /**
    * @brief Returns the type of the entity
    * @return String value representing the type of the entity
-  */
+   */
   virtual std::string getType() const = 0;
 
   /**
    * @brief Returns the hungerLevel of the entity
    * @return Double value representing the entities hunger level
-  */
-  virtual double getHungerLevel() const { return hungerLevel; };
+   */
+  virtual double getHungerLevel() const { return hungerLevel; }
 
   /**
-   * @brief Assigns a new value to hungerLevel 
+   * @brief Assigns a new value to hungerLevel
    * @param newHunger The new hungerLevel
-  */
-  virtual void setHungerLevel(double newHunger) {hungerLevel = newHunger; };
+   */
+  virtual void setHungerLevel(double newHunger) { hungerLevel = newHunger; }
 
   /**
    * @brief Returns true if the entity is dead
    * @return True if entity is dead, false if not
-  */
-  virtual bool isDead() const { return dead; };
+   */
+  virtual bool isDead() const { return dead; }
 
   /**
    * @brief Sets the dead value of entity
    * @param newDead New value of dead
-  */
-  virtual void setDead(bool newDead) { dead = newDead; };;;;;;;;;;
+   */
+  virtual void setDead(bool newDead) { dead = newDead; }
 
   /**
    * @brief Gets the entity nearest to the current entity
    * @return Entity closest to the current entity
-  */
+   */
   virtual IEntity* getterNearestEntity() const { return nullptr; }
 
   /**
    * @brief Returns true if entity is picked up
    * @return Bool if entity is picked up
-  */
-  virtual bool isPickedUp() const { return false; };
+   */
+  virtual bool isPickedUp() const { return false; }
 
   /**
    * @brief Resets value of entity
-  */
-  virtual void resetEntity() {};
+   */
+  virtual void resetEntity() {}
 
   /**
    * @brief Sets the publisher of entity
    * @param newPub New publisher value
-  */
-  virtual void SetPublisher(Publisher* newPub) { publisher = newPub; };
+   */
+  virtual void SetPublisher(Publisher* newPub) { publisher = newPub; }
 
   /**
    * @brief Returns entities publisher
-   * @return Pointer to entities current publisher 
-  */
-  virtual Publisher* GetPublisher() { return publisher; };
+   * @return Pointer to entities current publisher
+   */
+  virtual Publisher* GetPublisher() { return publisher; }
 
  protected:
   int id;

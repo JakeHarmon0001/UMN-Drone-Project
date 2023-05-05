@@ -1,6 +1,7 @@
 ../../build/libs/libtransit.a/src/DfsStrategy.o: src/DfsStrategy.cc \
  include/DfsStrategy.h include/PathStrategy.h include/IStrategy.h \
- include/IEntity.h ../../libs/routing/include/graph.h \
+ include/IEntity.h include/Publisher.h include/Subscriber.h \
+ ../../libs/routing/include/graph.h \
  ../../libs/routing/include/routing_strategy.h \
  ../../libs/routing/include/graph.h \
  ../../libs/routing/include/distance_function.h \
@@ -86,8 +87,7 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/Publisher.h \
- include/Subscriber.h \
+ ../../dependencies/include/picojson.h \
  ../../libs/routing/include/routing/depth_first_search.h \
  ../../libs/routing/include/routing_strategy.h
 
@@ -98,6 +98,10 @@ include/PathStrategy.h:
 include/IStrategy.h:
 
 include/IEntity.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 ../../libs/routing/include/graph.h:
 
@@ -276,10 +280,6 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
-
-include/Publisher.h:
-
-include/Subscriber.h:
 
 ../../libs/routing/include/routing/depth_first_search.h:
 

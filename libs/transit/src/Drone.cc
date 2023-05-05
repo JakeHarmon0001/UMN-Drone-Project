@@ -33,7 +33,7 @@ Drone::~Drone() {
 void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
   float minDis = std::numeric_limits<float>::max();
   for (auto entity : scheduler) {
-    if(entity->getType() == "robot"){
+    if (entity->getType() == "robot") {
       if (entity->GetAvailability()) {
         float disToEntity = this->position.Distance(entity->GetPosition());
         if (disToEntity <= minDis) {
@@ -45,12 +45,14 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
   }
 
   if (nearestEntity) {
-      // set availability to the nearest entity
+    // set availability to the nearest entity
     nearestEntity->SetAvailability(false);
     available = false;
     pickedUp = false;
 
-    publisher->setMessage(std::string(details["name"]) + ": Starting route to robot " + std::string(nearestEntity->GetDetails()["name"]) + "\n");
+    publisher->setMessage(
+        std::string(details["name"]) + ": Starting route to robot " +
+        std::string(nearestEntity->GetDetails()["name"]) + "\n");
     publisher->notify();
 
     destination = nearestEntity->GetPosition();
@@ -60,22 +62,21 @@ void Drone::GetNearestEntity(std::vector<IEntity*> scheduler) {
 
     std::string strat = nearestEntity->GetStrategyName();
     if (strat == "astar")
-      toFinalDestination =
-        new JumpDecorator(new AstarStrategy(destination, finalDestination, graph));
+      toFinalDestination = new JumpDecorator(
+          new AstarStrategy(destination, finalDestination, graph));
     else if (strat == "dfs")
-      toFinalDestination =
-        new SpinDecorator(new JumpDecorator(new DfsStrategy(destination, finalDestination, graph)));
+      toFinalDestination = new SpinDecorator(new JumpDecorator(
+          new DfsStrategy(destination, finalDestination, graph)));
     else if (strat == "dijkstra")
-      toFinalDestination =
-        new JumpDecorator(new SpinDecorator(new DijkstraStrategy(destination, finalDestination, graph)));
+      toFinalDestination = new JumpDecorator(new SpinDecorator(
+          new DijkstraStrategy(destination, finalDestination, graph)));
     else
       toFinalDestination = new BeelineStrategy(destination, finalDestination);
   }
 }
 
 void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
-  if (available)
-    GetNearestEntity(scheduler);
+  if (available) GetNearestEntity(scheduler);
 
   if (toRobot) {
     toRobot->Move(this, dt);
@@ -84,7 +85,9 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
       delete toRobot;
       toRobot = nullptr;
       pickedUp = true;
-      publisher->setMessage(std::string(details["name"]) + ": Picked up robot " + std::string(nearestEntity->GetDetails()["name"]) + "\n");
+      publisher->setMessage(
+          std::string(details["name"]) + ": Picked up robot " +
+          std::string(nearestEntity->GetDetails()["name"]) + "\n");
       publisher->notify();
     }
   } else if (toFinalDestination) {
@@ -98,7 +101,9 @@ void Drone::Update(double dt, std::vector<IEntity*> scheduler) {
     if (toFinalDestination->IsCompleted()) {
       delete toFinalDestination;
       toFinalDestination = nullptr;
-      publisher->setMessage( std::string(details["name"]) + ": Trip completed, dropped off " + std::string(nearestEntity->GetDetails()["name"]) + "\n");
+      publisher->setMessage(
+          std::string(details["name"]) + ": Trip completed, dropped off " +
+          std::string(nearestEntity->GetDetails()["name"]) + "\n");
       publisher->notify();
       nearestEntity = nullptr;
       available = true;

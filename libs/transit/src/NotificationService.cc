@@ -1,6 +1,6 @@
 #include "NotificationService.h"
 
-//Handles receiving messages and relays them from front-end to back-end
+// Handles receiving messages and relays them from front-end to back-end
 
 NotificationService::NotificationService(IController& c) : controller(c) {
   currMessage = "NO EVENT";

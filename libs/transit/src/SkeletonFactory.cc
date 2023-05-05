@@ -1,5 +1,6 @@
-#include "Skeleton.h"
 #include "SkeletonFactory.h"
+
+#include "Skeleton.h"
 
 IEntity* SkeletonFactory::CreateEntity(JsonObject& entity) {
   std::string type = entity["type"];

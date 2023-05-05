@@ -119,7 +119,11 @@ class Drone : public IEntity {
    */
   void Jump(double height);
 
-  std::string getType() const {return "drone"; }
+  /**
+   * @brief returns type of drone
+   * @return String "drone"
+   */
+  std::string getType() const { return "drone"; }
 
   /**
    * @brief Removing the copy constructor and assignment operator
@@ -130,7 +134,7 @@ class Drone : public IEntity {
 
   /**
    * @brief Resets value of the drone
-  */
+   */
   void resetEntity() {
     nearestEntity = nullptr;
     toRobot = nullptr;
@@ -142,14 +146,14 @@ class Drone : public IEntity {
   /**
    * @brief Returns value assigned to nearest entity
    * @return Returns nearestEntity
-  */
+   */
   virtual IEntity* getterNearestEntity() const { return nearestEntity; }
 
   /**
    * @brief Returns true if the drone has a robot
    * @return Bool true if drone has a robot
-  */
-  virtual bool isPickedUp() const { return pickedUp; };
+   */
+  virtual bool isPickedUp() const { return pickedUp; }
 
  private:
   JsonObject details;

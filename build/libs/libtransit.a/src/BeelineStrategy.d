@@ -1,5 +1,6 @@
 ../../build/libs/libtransit.a/src/BeelineStrategy.o: \
  src/BeelineStrategy.cc include/BeelineStrategy.h include/IEntity.h \
+ include/Publisher.h include/Subscriber.h \
  ../../libs/routing/include/graph.h \
  ../../libs/routing/include/routing_strategy.h \
  ../../libs/routing/include/graph.h \
@@ -86,12 +87,15 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/Publisher.h \
- include/Subscriber.h include/IStrategy.h
+ ../../dependencies/include/picojson.h include/IStrategy.h
 
 include/BeelineStrategy.h:
 
 include/IEntity.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 ../../libs/routing/include/graph.h:
 
@@ -270,9 +274,5 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
-
-include/Publisher.h:
-
-include/Subscriber.h:
 
 include/IStrategy.h:

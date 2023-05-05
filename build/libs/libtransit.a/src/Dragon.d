@@ -1,5 +1,6 @@
 ../../build/libs/libtransit.a/src/Dragon.o: src/Dragon.cc \
  include/Dragon.h include/IController.h include/IEntity.h \
+ include/Publisher.h include/Subscriber.h \
  ../../libs/routing/include/graph.h \
  ../../libs/routing/include/routing_strategy.h \
  ../../libs/routing/include/graph.h \
@@ -86,15 +87,18 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/Publisher.h \
- include/Subscriber.h include/IStrategy.h include/BeelineStrategy.h \
- include/HungerDecorator.h
+ ../../dependencies/include/picojson.h include/IStrategy.h \
+ include/BeelineStrategy.h include/HungerDecorator.h
 
 include/Dragon.h:
 
 include/IController.h:
 
 include/IEntity.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 ../../libs/routing/include/graph.h:
 
@@ -273,10 +277,6 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
-
-include/Publisher.h:
-
-include/Subscriber.h:
 
 include/IStrategy.h:
 

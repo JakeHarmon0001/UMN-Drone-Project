@@ -65,6 +65,10 @@ class Human : public IEntity {
    */
   void SetDirection(Vector3 dir_) { direction = dir_; }
 
+  /**
+   * @brief returns type of human
+   * @return String "human"
+   */
   std::string getType() const { return "human"; }
 
   /**
@@ -75,7 +79,7 @@ class Human : public IEntity {
 
   void CreateNewDestination();
 
-  private:
+ private:
   JsonObject details;
   Vector3 position;
   Vector3 direction;

@@ -1,6 +1,7 @@
 ../../build/libs/libtransit.a/src/SpinDecorator.o: src/SpinDecorator.cc \
  include/SpinDecorator.h include/CelebrationDecorator.h \
- include/IStrategy.h include/IEntity.h ../../libs/routing/include/graph.h \
+ include/IStrategy.h include/IEntity.h include/Publisher.h \
+ include/Subscriber.h ../../libs/routing/include/graph.h \
  ../../libs/routing/include/routing_strategy.h \
  ../../libs/routing/include/graph.h \
  ../../libs/routing/include/distance_function.h \
@@ -86,8 +87,7 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/Publisher.h \
- include/Subscriber.h
+ ../../dependencies/include/picojson.h
 
 include/SpinDecorator.h:
 
@@ -96,6 +96,10 @@ include/CelebrationDecorator.h:
 include/IStrategy.h:
 
 include/IEntity.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 ../../libs/routing/include/graph.h:
 
@@ -274,7 +278,3 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
-
-include/Publisher.h:
-
-include/Subscriber.h:

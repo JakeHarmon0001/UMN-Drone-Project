@@ -83,17 +83,17 @@
  ../../libs/transit/include/SimulationModel.h \
  ../../libs/transit/include/CompositeFactory.h \
  ../../libs/transit/include/IEntityFactory.h \
- ../../libs/transit/include/IEntity.h ../../libs/routing/include/graph.h \
+ ../../libs/transit/include/IEntity.h \
+ ../../libs/transit/include/Publisher.h \
+ ../../libs/transit/include/Subscriber.h \
+ ../../libs/routing/include/graph.h \
  ../../libs/routing/include/routing_strategy.h \
  ../../libs/routing/include/graph.h \
  ../../libs/routing/include/distance_function.h \
  ../../libs/routing/include/bounding_box.h \
  ../../libs/transit/include/math/vector3.h \
  ../../libs/transit/include/util/json.h \
- ../../dependencies/include/picojson.h \
- ../../libs/transit/include/Publisher.h \
- ../../libs/transit/include/Subscriber.h \
- ../../libs/transit/include/Drone.h \
+ ../../dependencies/include/picojson.h ../../libs/transit/include/Drone.h \
  ../../libs/transit/include/IStrategy.h \
  ../../libs/transit/include/IController.h \
  ../../libs/transit/include/Robot.h \
@@ -271,6 +271,10 @@
 
 ../../libs/transit/include/IEntity.h:
 
+../../libs/transit/include/Publisher.h:
+
+../../libs/transit/include/Subscriber.h:
+
 ../../libs/routing/include/graph.h:
 
 ../../libs/routing/include/routing_strategy.h:
@@ -286,10 +290,6 @@
 ../../libs/transit/include/util/json.h:
 
 ../../dependencies/include/picojson.h:
-
-../../libs/transit/include/Publisher.h:
-
-../../libs/transit/include/Subscriber.h:
 
 ../../libs/transit/include/Drone.h:
 

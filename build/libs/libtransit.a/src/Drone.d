@@ -1,5 +1,6 @@
 ../../build/libs/libtransit.a/src/Drone.o: src/Drone.cc include/Drone.h \
- include/IEntity.h ../../libs/routing/include/graph.h \
+ include/IEntity.h include/Publisher.h include/Subscriber.h \
+ ../../libs/routing/include/graph.h \
  ../../libs/routing/include/routing_strategy.h \
  ../../libs/routing/include/graph.h \
  ../../libs/routing/include/distance_function.h \
@@ -85,15 +86,18 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/Publisher.h \
- include/Subscriber.h include/IStrategy.h include/AstarStrategy.h \
- include/PathStrategy.h include/BeelineStrategy.h include/DfsStrategy.h \
- include/DijkstraStrategy.h include/JumpDecorator.h \
+ ../../dependencies/include/picojson.h include/IStrategy.h \
+ include/AstarStrategy.h include/PathStrategy.h include/BeelineStrategy.h \
+ include/DfsStrategy.h include/DijkstraStrategy.h include/JumpDecorator.h \
  include/CelebrationDecorator.h include/SpinDecorator.h
 
 include/Drone.h:
 
 include/IEntity.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 ../../libs/routing/include/graph.h:
 
@@ -272,10 +276,6 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
-
-include/Publisher.h:
-
-include/Subscriber.h:
 
 include/IStrategy.h:
 

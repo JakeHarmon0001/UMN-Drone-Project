@@ -20,7 +20,7 @@ class Robot : public IEntity {
    * @brief Constructor
    * @param obj JSON object containing the robot's information
    */
-  Robot(JsonObject& obj);
+  Robot(JsonObject &obj);
 
   /**
    * @brief Destructor
@@ -112,8 +112,8 @@ class Robot : public IEntity {
   /**
    * @brief Returns the type of the drone
    * @return String "robot"
-  */
-  std::string getType() const {return "robot"; }
+   */
+  std::string getType() const { return "robot"; }
 
  private:
   JsonObject details;
@@ -125,4 +125,4 @@ class Robot : public IEntity {
   std::string strategyName;
 };
 
-#endif  // ROBOT_H
+#endif

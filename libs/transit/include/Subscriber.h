@@ -2,18 +2,17 @@
 #define SUBSCRIBER_H_
 
 #include <string>
-//using namespace routing;
+// using namespace routing;
 
 /**
  * @class Subscriber
  * @brief Represents an subscriber in a notification system.
  *
- * An Subscriber object has a 
+ * An Subscriber object has a
  */
 class Subscriber {
  public:
-
- Subscriber() : currMessage("NO EVENT") {};
+  Subscriber() : currMessage("NO EVENT") {}
   /**
    * @brief Updates the current message to be relayed.
    */

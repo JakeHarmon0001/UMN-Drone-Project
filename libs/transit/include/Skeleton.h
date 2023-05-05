@@ -19,6 +19,10 @@ class Skeleton : public IEntity {
    */
   ~Skeleton();
 
+  /**
+   * @brief returns type of skeleton
+   * @return String "skeleton"
+   */
   std::string getType() const {return "skeleton";}
 
   /**
@@ -37,7 +41,7 @@ class Skeleton : public IEntity {
    * @brief Gets the skeleton's destination
    * @return The skeleton's destination
    */
-  Vector3 GetDestination() const { return {0,0,0}; }
+  Vector3 GetDestination() const { return {0, 0, 0}; }
 
   /**
    * @brief Gets the skeleton's availability
@@ -63,9 +67,7 @@ class Skeleton : public IEntity {
    */
   void SetPosition(Vector3 pos_) { position = pos_; }
 
-  
-
-  private:
+ private:
   JsonObject details;
   Vector3 direction;
   Vector3 position;

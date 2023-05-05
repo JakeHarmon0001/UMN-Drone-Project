@@ -73,7 +73,11 @@ class Helicopter : public IEntity {
 
   void CreateNewDestination();
 
-  std::string getType() const {return "helicopter"; }
+  /**
+   * @brief returns type of helicopter
+   * @return String "helicopter"
+   */
+  std::string getType() const { return "helicopter"; }
 
   /**
    * @brief Rotates the drone
@@ -81,7 +85,7 @@ class Helicopter : public IEntity {
    */
   void Rotate(double angle);
 
-  private:
+ private:
   JsonObject details;
   Vector3 position;
   Vector3 direction;

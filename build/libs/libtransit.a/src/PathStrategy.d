@@ -1,5 +1,6 @@
 ../../build/libs/libtransit.a/src/PathStrategy.o: src/PathStrategy.cc \
  include/PathStrategy.h include/IStrategy.h include/IEntity.h \
+ include/Publisher.h include/Subscriber.h \
  ../../libs/routing/include/graph.h \
  ../../libs/routing/include/routing_strategy.h \
  ../../libs/routing/include/graph.h \
@@ -86,14 +87,17 @@
  ../../dependencies/include/libwebsockets/lws-settings.h \
  ../../dependencies/include/libwebsockets/lws-netdev.h \
  ../../dependencies/include/picojson.h \
- ../../dependencies/include/picojson.h include/Publisher.h \
- include/Subscriber.h
+ ../../dependencies/include/picojson.h
 
 include/PathStrategy.h:
 
 include/IStrategy.h:
 
 include/IEntity.h:
+
+include/Publisher.h:
+
+include/Subscriber.h:
 
 ../../libs/routing/include/graph.h:
 
@@ -272,7 +276,3 @@ include/util/json.h:
 ../../dependencies/include/picojson.h:
 
 ../../dependencies/include/picojson.h:
-
-include/Publisher.h:
-
-include/Subscriber.h:

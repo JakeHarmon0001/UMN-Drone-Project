@@ -1,13 +1,13 @@
 #include "SimulationModel.h"
 
-#include "DroneFactory.h"
-#include "RobotFactory.h"
-#include "HumanFactory.h"
-#include "HelicopterFactory.h"
 #include "DragonFactory.h"
-#include "SkeletonFactory.h"
+#include "DroneFactory.h"
+#include "HelicopterFactory.h"
+#include "HumanFactory.h"
 #include "NotificationService.h"
 #include "Publisher.h"
+#include "RobotFactory.h"
+#include "SkeletonFactory.h"
 
 SimulationModel::SimulationModel(IController& controller)
     : controller(controller) {
@@ -18,11 +18,10 @@ SimulationModel::SimulationModel(IController& controller)
   AddFactory(new HelicopterFactory());
   AddFactory(new DragonFactory());
   AddFactory(new SkeletonFactory());
-  
+
   notifier = new NotificationService(controller);
   publisher = new Publisher();
   publisher->sub(notifier);
-  
 }
 
 SimulationModel::~SimulationModel() {
@@ -39,24 +38,15 @@ SimulationModel::~SimulationModel() {
 }
 
 void SimulationModel::CreateEntity(JsonObject& entity) {
-  std::cout << "creating entity" << std::endl;
-  // std::cout << "type: ";
-  // std::cout << entity["type"] << std::endl;
-  // std::cout << "name: ";
-  // std::cout << entity["name"] << std::endl;
-  std::cout << "position: ";
-  std::cout << entity["position"] << std::endl;
   std::string type = entity["type"];
   std::string name = entity["name"];
   JsonArray position = entity["position"];
-  std::cout << name << ": " << position << std::endl;
-  
+
   IEntity* myNewEntity = compFactory->CreateEntity(entity);
   myNewEntity->SetGraph(graph);
-  //assign publisher to each entity
+  // assign publisher to each entity
   myNewEntity->SetPublisher(publisher);
   // Call AddEntity to add it to the view
-  std::cout << "Controller adding entity" << std::endl;
   controller.AddEntity(*myNewEntity);
   entities.push_back(myNewEntity);
 }
@@ -66,7 +56,6 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
   std::string name = details["name"];
   JsonArray start = details["start"];
   JsonArray end = details["end"];
-  std::cout << name << ": " << start << " --> " << end << std::endl;
 
   for (auto entity : entities) {  // Add the entity to the scheduler
     JsonObject detailsTemp = entity->GetDetails();
@@ -87,53 +76,30 @@ void SimulationModel::ScheduleTrip(JsonObject& details) {
 // Updates the simulation
 void SimulationModel::Update(double dt) {
   for (int i = 0; i < entities.size(); i++) {
-    if(entities[i]->getType() == "dragon"){
+    if (entities[i]->getType() == "dragon") {
       entities[i]->Update(dt, entities);
     } else {
       entities[i]->Update(dt, scheduler);
     }
     controller.UpdateEntity(*entities[i]);
-    if(entities[i]->isDead()){
-      // std::cout << "something is dead" << std::endl;
-      
-      if(entities[i]->getType() == "dragon") {
-        
-        // std::cout << entities[i]->GetId() << std::endl;
-        // std::cout << "identified dead entity as dragon" << std::endl;
-        //create skeleton JsonArray arr = {9.0, "Hello", 1, JsonArray()};
+    if (entities[i]->isDead()) {
+      if (entities[i]->getType() == "dragon") {
+        // create skeleton JsonArray arr = {9.0, "Hello", 1, JsonArray()};
         JsonObject details = entities[i]->GetDetails();
         details["type"] = "skeleton";
         details["name"] = "Skeleton";
-        details["mesh"] = "assets/model/mario_movie_-_dry_bones.glb"; 
+        details["mesh"] = "assets/model/mario_movie_-_dry_bones.glb";
         Vector3 temp = entities[i]->GetPosition();
         JsonArray jdon = {temp.x, temp.y + 42, temp.z};
         details["position"] = jdon;
         JsonArray scale = {0.2, 0.2, 0.2};
         details["scale"] = scale;
-   
-        CreateEntity(details);
 
-        
+        CreateEntity(details);
       }
       controller.RemoveEntity(entities[i]->GetId());
-      entities.erase(entities.begin()+i);
+      entities.erase(entities.begin() + i);
       i--;
-      // } else if(entities[i]->getType() == "robot"){ // reschedule the stranded robot
-      //   entities[i]->setDead(false);
-      //   entities[i]->SetAvailability(true);
-      //   JsonObject trip;
-      //   Vector3 dest = entities[i]->GetDestination();
-      //   JsonArray destarr = {dest.x, dest.y, dest.z};
-      //   Vector3 start = entities[i]->GetPosition();
-      //   JsonArray startarr = {start.x, start.y, start.z};
-      //   trip["name"] = entities[i]->GetDetails()["name"];
-      //   trip["start"] = startarr;
-      //   trip["end"] = destarr;
-      //   trip["search"] = entities[i]->GetStrategyName();
-      //   ScheduleTrip(trip);
-
-      // }
-      
     }
   }
 }
