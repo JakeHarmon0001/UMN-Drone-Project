@@ -109,6 +109,10 @@ class Robot : public IEntity {
    */
   void Rotate(double angle);
 
+  /**
+   * @brief Returns the type of the drone
+   * @return String "robot"
+  */
   std::string getType() const {return "robot"; }
 
  private:

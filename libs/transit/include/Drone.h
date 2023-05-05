@@ -128,6 +128,9 @@ class Drone : public IEntity {
   Drone(const Drone& drone) = delete;
   Drone& operator=(const Drone& drone) = delete;
 
+  /**
+   * @brief Resets value of the drone
+  */
   void resetEntity() {
     nearestEntity = nullptr;
     toRobot = nullptr;
@@ -136,8 +139,16 @@ class Drone : public IEntity {
     available = true;
   }
 
+  /**
+   * @brief Returns value assigned to nearest entity
+   * @return Returns nearestEntity
+  */
   virtual IEntity* getterNearestEntity() const { return nearestEntity; }
 
+  /**
+   * @brief Returns true if the drone has a robot
+   * @return Bool true if drone has a robot
+  */
   virtual bool isPickedUp() const { return pickedUp; };
 
  private:
