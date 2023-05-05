@@ -29,6 +29,8 @@ First, in order to utilize the dragons, one must click the “Add Dragon” butt
 ## Sprint retrospective
 As a team we had a setup where our sprints consisted of many spread out, multiple-hour-long sessions where we would all work together to add our features to the project. Although maybe a bit unconventional, we really never worked on actual implementation of code alone. We always got together as a group where at least two people would be working together to code. Our sessions were extremely productive and we would end them all exhausted with tired eyes and brains. For example, a few days ago we all hopped on discord for about five hours in order to implement the skeletons for when the dragons died. We all found comfort in working together as a team, and found it to be more efficient often having four sets of eyes on the code. We definitely spent more time on our dragon feature sprint than our notification feature sprint, but we still thought doing sprints for each was a good setup.
 
+![uml](https://gdurl.com/zFYL)
+
 # Links
 
 ## Youtube Video:
