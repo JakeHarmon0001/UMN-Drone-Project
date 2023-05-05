@@ -1,0 +1,133 @@
+\hypertarget{classHungerDecorator}{}\doxysection{Hunger\+Decorator Class Reference}
+\label{classHungerDecorator}\index{HungerDecorator@{HungerDecorator}}
+
+
+this class inhertis from the \mbox{\hyperlink{classIStrategy}{I\+Strategy}} class and is represents a hunger decorator where the entity will die according to it.  
+
+
+
+
+{\ttfamily \#include $<$Hunger\+Decorator.\+h$>$}
+
+
+
+Inheritance diagram for Hunger\+Decorator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classHungerDecorator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hunger\+Decorator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classHungerDecorator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHungerDecorator_ae6dec65a59698944c1567bc8d6543cb6}{Hunger\+Decorator}} (\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$strategy)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classHungerDecorator}{Hunger\+Decorator}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHungerDecorator_aeab65a2be5e1aca05c2e459e0cd9c4d0}\label{classHungerDecorator_aeab65a2be5e1aca05c2e459e0cd9c4d0}} 
+\mbox{\hyperlink{classHungerDecorator_aeab65a2be5e1aca05c2e459e0cd9c4d0}{$\sim$\+Hunger\+Decorator}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHungerDecorator}{Hunger\+Decorator}} destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHungerDecorator_a1f09eb0c9e8a569cc81b6d5b1051021d}{is\+Dead}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if entity is dead. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHungerDecorator_a28235715668e162e2799d999f739119a}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
+\begin{DoxyCompactList}\small\item\em Moves the entity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHungerDecorator_afd4dcdd47526f48b651daad16eb499d9}{Is\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em returns true if movement is complete \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHungerDecorator_a46f1725c38a1a2685967db1b1576c07b}\label{classHungerDecorator_a46f1725c38a1a2685967db1b1576c07b}} 
+\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$ {\bfseries strategy}
+\item 
+\mbox{\Hypertarget{classHungerDecorator_a12257a46655944e8873bbb857a42be20}\label{classHungerDecorator_a12257a46655944e8873bbb857a42be20}} 
+bool {\bfseries dead}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+this class inhertis from the \mbox{\hyperlink{classIStrategy}{I\+Strategy}} class and is represents a hunger decorator where the entity will die according to it. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHungerDecorator_ae6dec65a59698944c1567bc8d6543cb6}\label{classHungerDecorator_ae6dec65a59698944c1567bc8d6543cb6}} 
+\index{HungerDecorator@{HungerDecorator}!HungerDecorator@{HungerDecorator}}
+\index{HungerDecorator@{HungerDecorator}!HungerDecorator@{HungerDecorator}}
+\doxysubsubsection{\texorpdfstring{HungerDecorator()}{HungerDecorator()}}
+{\footnotesize\ttfamily Hunger\+Decorator\+::\+Hunger\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIStrategy}{I\+Strategy}} $\ast$}]{strategy }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classHungerDecorator}{Hunger\+Decorator}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy} & the strategy to decorate onto \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHungerDecorator_afd4dcdd47526f48b651daad16eb499d9}\label{classHungerDecorator_afd4dcdd47526f48b651daad16eb499d9}} 
+\index{HungerDecorator@{HungerDecorator}!IsCompleted@{IsCompleted}}
+\index{IsCompleted@{IsCompleted}!HungerDecorator@{HungerDecorator}}
+\doxysubsubsection{\texorpdfstring{IsCompleted()}{IsCompleted()}}
+{\footnotesize\ttfamily bool Hunger\+Decorator\+::\+Is\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns true if movement is complete 
+
+\begin{DoxyReturn}{Returns}
+Bool whether movement is complete 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a13c6048efd232b696db5f35000d5b106}{I\+Strategy}}.
+
+\mbox{\Hypertarget{classHungerDecorator_a1f09eb0c9e8a569cc81b6d5b1051021d}\label{classHungerDecorator_a1f09eb0c9e8a569cc81b6d5b1051021d}} 
+\index{HungerDecorator@{HungerDecorator}!isDead@{isDead}}
+\index{isDead@{isDead}!HungerDecorator@{HungerDecorator}}
+\doxysubsubsection{\texorpdfstring{isDead()}{isDead()}}
+{\footnotesize\ttfamily bool Hunger\+Decorator\+::is\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns true if entity is dead. 
+
+\begin{DoxyReturn}{Returns}
+Bool representing whether the entity is dead 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHungerDecorator_a28235715668e162e2799d999f739119a}\label{classHungerDecorator_a28235715668e162e2799d999f739119a}} 
+\index{HungerDecorator@{HungerDecorator}!Move@{Move}}
+\index{Move@{Move}!HungerDecorator@{HungerDecorator}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Hunger\+Decorator\+::\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Entity to be moved \\
+\hline
+{\em dt} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a69254389f4ef9a851dc5d40c4cc9aacd}{I\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/include/Hunger\+Decorator.\+h\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/src/Hunger\+Decorator.\+cc\end{DoxyCompactItemize}

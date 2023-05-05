@@ -1,0 +1,12 @@
+<map id="IStrategy" name="IStrategy">
+<area shape="rect" id="node1" title="Strategy interface." alt="" coords="281,5,363,32"/>
+<area shape="rect" id="node2" href="$classBeelineStrategy.html" title="this class inhertis from the IStrategy class and is responsible for generating the beeline that the d..." alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$classCelebrationDecorator.html" title="this class inhertis from the IStrategy class and is represents a celebration decorator where the enti..." alt="" coords="156,80,317,107"/>
+<area shape="rect" id="node6" href="$classHungerDecorator.html" title="this class inhertis from the IStrategy class and is represents a hunger decorator where the entity wi..." alt="" coords="342,80,475,107"/>
+<area shape="rect" id="node7" href="$classPathStrategy.html" title="this class inhertis from the IStrategy class and is represents a movement strategy where the entity s..." alt="" coords="499,80,606,107"/>
+<area shape="rect" id="node4" href="$classJumpDecorator.html" title="this class inhertis from the IStrategy class and is represents a celebration decorator where the enti..." alt="" coords="60,155,179,181"/>
+<area shape="rect" id="node5" href="$classSpinDecorator.html" title="this class inhertis from the IStrategy class and is represents a celebration decorator where the enti..." alt="" coords="203,155,318,181"/>
+<area shape="rect" id="node8" href="$classAstarStrategy.html" title="this class inhertis from the PathStrategy class and is responsible for generating the astar path that..." alt="" coords="368,155,479,181"/>
+<area shape="rect" id="node9" href="$classDfsStrategy.html" title="this class inhertis from the PathStrategy class and is responsible for generating the depth first sea..." alt="" coords="503,155,602,181"/>
+<area shape="rect" id="node10" href="$classDijkstraStrategy.html" title="this class inhertis from the PathStrategy class and is responsible for generating the dijkstra path t..." alt="" coords="626,155,754,181"/>
+</map>

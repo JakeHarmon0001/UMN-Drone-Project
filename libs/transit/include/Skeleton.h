@@ -3,7 +3,9 @@
 
 #include "IEntity.h"
 #include "IStrategy.h"
-
+/**
+ * @brief Represents a Skeleton in a physical system
+*/
 class Skeleton : public IEntity {
  public:
   /**

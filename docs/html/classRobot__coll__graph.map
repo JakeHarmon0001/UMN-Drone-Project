@@ -1,0 +1,5 @@
+<map id="Robot" name="Robot">
+<area shape="rect" id="node1" title="Represents a robot in a physical system." alt="" coords="17,171,77,197"/>
+<area shape="rect" id="node2" href="$classIEntity.html" title="Represents an entity in a physical system." alt="" coords="15,95,79,121"/>
+<area shape="rect" id="node3" href="$classPublisher.html" title="Publisher class used for sending notifications." alt="" coords="5,5,88,32"/>
+</map>

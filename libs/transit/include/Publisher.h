@@ -5,6 +5,9 @@
 #include <string>
 //using namespace routing;
 
+/**
+ * @brief Publisher class used for sending notifications
+*/
 class Publisher {
  public:
   /**

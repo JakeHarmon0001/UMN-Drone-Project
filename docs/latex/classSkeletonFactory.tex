@@ -1,0 +1,71 @@
+\hypertarget{classSkeletonFactory}{}\doxysection{Skeleton\+Factory Class Reference}
+\label{classSkeletonFactory}\index{SkeletonFactory@{SkeletonFactory}}
+
+
+skeleton Factory to produce \mbox{\hyperlink{classSkeleton}{Skeleton}} class.  
+
+
+
+
+{\ttfamily \#include $<$Skeleton\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for Skeleton\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classSkeletonFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Skeleton\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classSkeletonFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSkeletonFactory_a9f16ab978f7c9dc087fd6204213d5d5e}\label{classSkeletonFactory_a9f16ab978f7c9dc087fd6204213d5d5e}} 
+virtual \mbox{\hyperlink{classSkeletonFactory_a9f16ab978f7c9dc087fd6204213d5d5e}{$\sim$\+Skeleton\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classSkeletonFactory}{Skeleton\+Factory}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classSkeletonFactory_aaf7b07d7b7c3752a2bd1537fb668bcdd}{Create\+Entity}} (Json\+Object \&entity)
+\begin{DoxyCompactList}\small\item\em Creates entity using the given J\+S\+ON object, if possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+skeleton Factory to produce \mbox{\hyperlink{classSkeleton}{Skeleton}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSkeletonFactory_aaf7b07d7b7c3752a2bd1537fb668bcdd}\label{classSkeletonFactory_aaf7b07d7b7c3752a2bd1537fb668bcdd}} 
+\index{SkeletonFactory@{SkeletonFactory}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!SkeletonFactory@{SkeletonFactory}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Skeleton\+Factory\+::\+Create\+Entity (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates entity using the given J\+S\+ON object, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & -\/ Json\+Object to be used to create the new entity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entity that was created if it was created successfully, or a nullpointer if creation failed. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntityFactory_a9bd53cf7ca21ab252968062ea5d88180}{I\+Entity\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/include/Skeleton\+Factory.\+h\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/src/Skeleton\+Factory.\+cc\end{DoxyCompactItemize}

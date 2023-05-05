@@ -1,0 +1,332 @@
+\hypertarget{classDragon}{}\doxysection{Dragon Class Reference}
+\label{classDragon}\index{Dragon@{Dragon}}
+
+
+Represents a dragon in a physical system.  
+
+
+
+
+{\ttfamily \#include $<$Dragon.\+h$>$}
+
+
+
+Inheritance diagram for Dragon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{classDragon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dragon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classDragon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDragon_a7038a55218af55080af2edbd1d814195}{Dragon}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDragon}{Dragon}} are created with a Json\+Object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDragon_ae34521402d155aae936b65afbee22cf5}\label{classDragon_ae34521402d155aae936b65afbee22cf5}} 
+\mbox{\hyperlink{classDragon_ae34521402d155aae936b65afbee22cf5}{$\sim$\+Dragon}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classDragon}{Dragon}} object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classDragon_ac62a3e6d9e1873d84e5cc30a14884bc9}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the speed of the drone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classDragon_a01133ca34ab9313421f0ccf25629d92e}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the drone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classDragon_aa4af256150e493e5b0e49d75017510fd}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the direction of the drone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classDragon_a270cbf6917ec812bc9e568af35beda56}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the destination of the drone. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classDragon_a9b53c56f77210dec775104f305127c09}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the details information of the drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDragon_aed72082fab4bbd28be481f6473445ed6}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the drone\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDragon_ae9f2533623cc1d2dad3952e8f8b70f98}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the position of the drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDragon_a03023acf9711b3a3323665c5eddb4e5c}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the direction of the drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDragon_a50fa8e004c76dfdd3a6fe12ff836a88a}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the destination of the drone. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDragon_a9fcc611faf6b467e4d413c4d3017c858}\label{classDragon_a9fcc611faf6b467e4d413c4d3017c858}} 
+void {\bfseries Create\+New\+Destination} ()
+\item 
+void \mbox{\hyperlink{classDragon_a6a48d8f365d47258479e97f45704d8b8}{Get\+Nearest\+Entity}} (std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Gets the nearest entity in the scheduler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDragon_a650323596c0674898b7ab3f706f338bc}\label{classDragon_a650323596c0674898b7ab3f706f338bc}} 
+void {\bfseries add\+Controller} (\mbox{\hyperlink{classIController}{I\+Controller}} $\ast$controller)
+\item 
+void \mbox{\hyperlink{classDragon_aa70bfd4f03330b9adb5dec234d2e0c7a}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the drone. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDragon_aec6bd2cfe3d13f776fcc5f3997a2e47b}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em returns type of dragon \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDragon_a9954512314b04ca3cfa3daabe37f9339}{set\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em Set speed of dragon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a dragon in a physical system. 
+
+Subclass of \mbox{\hyperlink{classIEntity}{I\+Entity}} that represents a dragon. Dragons pursue drones and have hunger implemented. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDragon_a7038a55218af55080af2edbd1d814195}\label{classDragon_a7038a55218af55080af2edbd1d814195}} 
+\index{Dragon@{Dragon}!Dragon@{Dragon}}
+\index{Dragon@{Dragon}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{Dragon()}{Dragon()}}
+{\footnotesize\ttfamily Dragon\+::\+Dragon (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classDragon}{Dragon}} are created with a Json\+Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & J\+S\+ON object containing the drone\textquotesingle{}s information \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDragon_a270cbf6917ec812bc9e568af35beda56}\label{classDragon_a270cbf6917ec812bc9e568af35beda56}} 
+\index{Dragon@{Dragon}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Dragon\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the destination of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The destination of the drone 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_a9b53c56f77210dec775104f305127c09}\label{classDragon_a9b53c56f77210dec775104f305127c09}} 
+\index{Dragon@{Dragon}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Dragon\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the details information of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The details information of the drone 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_aa4af256150e493e5b0e49d75017510fd}\label{classDragon_aa4af256150e493e5b0e49d75017510fd}} 
+\index{Dragon@{Dragon}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Dragon\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the direction of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The direction of the drone 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_a6a48d8f365d47258479e97f45704d8b8}\label{classDragon_a6a48d8f365d47258479e97f45704d8b8}} 
+\index{Dragon@{Dragon}!GetNearestEntity@{GetNearestEntity}}
+\index{GetNearestEntity@{GetNearestEntity}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{GetNearestEntity()}{GetNearestEntity()}}
+{\footnotesize\ttfamily void Dragon\+::\+Get\+Nearest\+Entity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})}
+
+
+
+Gets the nearest entity in the scheduler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scheduler} & Vector containing all the entities in the system \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDragon_a01133ca34ab9313421f0ccf25629d92e}\label{classDragon_a01133ca34ab9313421f0ccf25629d92e}} 
+\index{Dragon@{Dragon}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Dragon\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the position of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The position of the drone 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_ac62a3e6d9e1873d84e5cc30a14884bc9}\label{classDragon_ac62a3e6d9e1873d84e5cc30a14884bc9}} 
+\index{Dragon@{Dragon}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Dragon\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the speed of the drone. 
+
+\begin{DoxyReturn}{Returns}
+The speed of the drone 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_aec6bd2cfe3d13f776fcc5f3997a2e47b}\label{classDragon_aec6bd2cfe3d13f776fcc5f3997a2e47b}} 
+\index{Dragon@{Dragon}!getType@{getType}}
+\index{getType@{getType}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Dragon\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+returns type of dragon 
+
+\begin{DoxyReturn}{Returns}
+String \char`\"{}dragon\char`\"{} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_acf90d593003711ef619cf14624f60ccc}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_aa70bfd4f03330b9adb5dec234d2e0c7a}\label{classDragon_aa70bfd4f03330b9adb5dec234d2e0c7a}} 
+\index{Dragon@{Dragon}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Dragon\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates the drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angle by which the drone should be rotated \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_a50fa8e004c76dfdd3a6fe12ff836a88a}\label{classDragon_a50fa8e004c76dfdd3a6fe12ff836a88a}} 
+\index{Dragon@{Dragon}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Dragon\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the destination of the drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des\+\_\+} & The new destination of the drone \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_a03023acf9711b3a3323665c5eddb4e5c}\label{classDragon_a03023acf9711b3a3323665c5eddb4e5c}} 
+\index{Dragon@{Dragon}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Dragon\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the direction of the drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+} & The new direction of the drone \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_ae9f2533623cc1d2dad3952e8f8b70f98}\label{classDragon_ae9f2533623cc1d2dad3952e8f8b70f98}} 
+\index{Dragon@{Dragon}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Dragon\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the position of the drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & The new position of the drone \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDragon_a9954512314b04ca3cfa3daabe37f9339}\label{classDragon_a9954512314b04ca3cfa3daabe37f9339}} 
+\index{Dragon@{Dragon}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily virtual void Dragon\+::set\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set speed of dragon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & Speed of dragon \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDragon_aed72082fab4bbd28be481f6473445ed6}\label{classDragon_aed72082fab4bbd28be481f6473445ed6}} 
+\index{Dragon@{Dragon}!Update@{Update}}
+\index{Update@{Update}!Dragon@{Dragon}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Dragon\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the drone\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+{\em scheduler} & Vector containing all the entities in the system \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/include/Dragon.\+h\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/src/Dragon.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{classDragonFactory}{}\doxysection{Dragon\+Factory Class Reference}
+\label{classDragonFactory}\index{DragonFactory@{DragonFactory}}
+
+
+\mbox{\hyperlink{classDragon}{Dragon}} Factory to produce \mbox{\hyperlink{classDragon}{Dragon}} class.  
+
+
+
+
+{\ttfamily \#include $<$Dragon\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for Dragon\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classDragonFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dragon\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classDragonFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDragonFactory_ad3c144fd01d087df8dc92bed5f291243}\label{classDragonFactory_ad3c144fd01d087df8dc92bed5f291243}} 
+virtual \mbox{\hyperlink{classDragonFactory_ad3c144fd01d087df8dc92bed5f291243}{$\sim$\+Dragon\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classDragonFactory}{Dragon\+Factory}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classDragonFactory_abc9ba0b47005f184461a65059c70bda2}{Create\+Entity}} (Json\+Object \&entity)
+\begin{DoxyCompactList}\small\item\em Creates entity using the given J\+S\+ON object, if possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classDragon}{Dragon}} Factory to produce \mbox{\hyperlink{classDragon}{Dragon}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDragonFactory_abc9ba0b47005f184461a65059c70bda2}\label{classDragonFactory_abc9ba0b47005f184461a65059c70bda2}} 
+\index{DragonFactory@{DragonFactory}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!DragonFactory@{DragonFactory}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Dragon\+Factory\+::\+Create\+Entity (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates entity using the given J\+S\+ON object, if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & -\/ Json\+Object to be used to create the new entity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entity that was created if it was created successfully, or a nullpointer if creation failed. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntityFactory_a9bd53cf7ca21ab252968062ea5d88180}{I\+Entity\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/include/Dragon\+Factory.\+h\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/src/Dragon\+Factory.\+cc\end{DoxyCompactItemize}

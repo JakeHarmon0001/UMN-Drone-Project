@@ -1,0 +1,4 @@
+<map id="HungerDecorator" name="HungerDecorator">
+<area shape="rect" id="node1" title="this class inhertis from the IStrategy class and is represents a hunger decorator where the entity wi..." alt="" coords="5,80,139,107"/>
+<area shape="rect" id="node2" href="$classIStrategy.html" title="Strategy interface." alt="" coords="31,5,113,32"/>
+</map>

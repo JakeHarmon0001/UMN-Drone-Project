@@ -1,0 +1,224 @@
+\hypertarget{classSkeleton}{}\doxysection{Skeleton Class Reference}
+\label{classSkeleton}\index{Skeleton@{Skeleton}}
+
+
+Represents a \mbox{\hyperlink{classSkeleton}{Skeleton}} in a physical system.  
+
+
+
+
+{\ttfamily \#include $<$Skeleton.\+h$>$}
+
+
+
+Inheritance diagram for Skeleton\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classSkeleton__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Skeleton\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classSkeleton__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSkeleton_a598059b4da3281280858dff5d4dae3f7}{Skeleton}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSkeleton}{Skeleton}} are created with a name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSkeleton_aeece886a4e2f039128144f94f25efd10}\label{classSkeleton_aeece886a4e2f039128144f94f25efd10}} 
+\mbox{\hyperlink{classSkeleton_aeece886a4e2f039128144f94f25efd10}{$\sim$\+Skeleton}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classSkeleton}{Skeleton}} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSkeleton_a6a06f180e6aa1085c09cfd3d0c27a5a6}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of the entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classSkeleton_a750e33874fd9417abbc42335ab8e405a}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the skeleton\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classSkeleton_a4f3818212bffae6e6e12cad6fc99e760}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the skeleton\textquotesingle{}s direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classSkeleton_a5b2aafe5d33538f7ae7827aa9cbd08b9}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the skeleton\textquotesingle{}s destination. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSkeleton_ad2505c6d086186b05a39f138ffd46f4e}{Get\+Availability}} () const
+\begin{DoxyCompactList}\small\item\em Gets the skeleton\textquotesingle{}s availability. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classSkeleton_a1c8bf3f3f54c3063a5e52dbbbe7caa24}{Get\+Details}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the skeleton\textquotesingle{}s details. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classSkeleton_ad3b2a7c665d494e186de37021e0f8109}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the skeleton\textquotesingle{}s speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSkeleton_acbeba11fe496cbb07e62821862e083a9}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the skeleton\textquotesingle{}s position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{classSkeleton}{Skeleton}} in a physical system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSkeleton_a598059b4da3281280858dff5d4dae3f7}\label{classSkeleton_a598059b4da3281280858dff5d4dae3f7}} 
+\index{Skeleton@{Skeleton}!Skeleton@{Skeleton}}
+\index{Skeleton@{Skeleton}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{Skeleton()}{Skeleton()}}
+{\footnotesize\ttfamily Skeleton\+::\+Skeleton (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSkeleton}{Skeleton}} are created with a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & J\+S\+ON object containing the skeletons\textquotesingle{}s information \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSkeleton_ad2505c6d086186b05a39f138ffd46f4e}\label{classSkeleton_ad2505c6d086186b05a39f138ffd46f4e}} 
+\index{Skeleton@{Skeleton}!GetAvailability@{GetAvailability}}
+\index{GetAvailability@{GetAvailability}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{GetAvailability()}{GetAvailability()}}
+{\footnotesize\ttfamily bool Skeleton\+::\+Get\+Availability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the skeleton\textquotesingle{}s availability. 
+
+\begin{DoxyReturn}{Returns}
+The skeleton\textquotesingle{}s availability 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a90348881691a37d5c3d63265ed3463b1}{I\+Entity}}.
+
+\mbox{\Hypertarget{classSkeleton_a5b2aafe5d33538f7ae7827aa9cbd08b9}\label{classSkeleton_a5b2aafe5d33538f7ae7827aa9cbd08b9}} 
+\index{Skeleton@{Skeleton}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Skeleton\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the skeleton\textquotesingle{}s destination. 
+
+\begin{DoxyReturn}{Returns}
+The skeleton\textquotesingle{}s destination 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classSkeleton_a1c8bf3f3f54c3063a5e52dbbbe7caa24}\label{classSkeleton_a1c8bf3f3f54c3063a5e52dbbbe7caa24}} 
+\index{Skeleton@{Skeleton}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Skeleton\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the skeleton\textquotesingle{}s details. 
+
+\begin{DoxyReturn}{Returns}
+The skeleton\textquotesingle{}s details 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classSkeleton_a4f3818212bffae6e6e12cad6fc99e760}\label{classSkeleton_a4f3818212bffae6e6e12cad6fc99e760}} 
+\index{Skeleton@{Skeleton}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Skeleton\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the skeleton\textquotesingle{}s direction. 
+
+\begin{DoxyReturn}{Returns}
+The skeleton\textquotesingle{}s direction 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classSkeleton_a750e33874fd9417abbc42335ab8e405a}\label{classSkeleton_a750e33874fd9417abbc42335ab8e405a}} 
+\index{Skeleton@{Skeleton}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Skeleton\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the skeleton\textquotesingle{}s position. 
+
+\begin{DoxyReturn}{Returns}
+The skeleton\textquotesingle{}s position 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classSkeleton_ad3b2a7c665d494e186de37021e0f8109}\label{classSkeleton_ad3b2a7c665d494e186de37021e0f8109}} 
+\index{Skeleton@{Skeleton}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Skeleton\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the skeleton\textquotesingle{}s speed. 
+
+\begin{DoxyReturn}{Returns}
+The skeleton\textquotesingle{}s speed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classSkeleton_a6a06f180e6aa1085c09cfd3d0c27a5a6}\label{classSkeleton_a6a06f180e6aa1085c09cfd3d0c27a5a6}} 
+\index{Skeleton@{Skeleton}!getType@{getType}}
+\index{getType@{getType}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Skeleton\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the type of the entity. 
+
+\begin{DoxyReturn}{Returns}
+String value representing the type of the entity 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_acf90d593003711ef619cf14624f60ccc}{I\+Entity}}.
+
+\mbox{\Hypertarget{classSkeleton_acbeba11fe496cbb07e62821862e083a9}\label{classSkeleton_acbeba11fe496cbb07e62821862e083a9}} 
+\index{Skeleton@{Skeleton}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Skeleton@{Skeleton}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Skeleton\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the skeleton\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & The new position of the skeleton \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/include/Skeleton.\+h\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/src/Skeleton.\+cc\end{DoxyCompactItemize}

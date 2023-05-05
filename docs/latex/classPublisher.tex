@@ -1,0 +1,66 @@
+\hypertarget{classPublisher}{}\doxysection{Publisher Class Reference}
+\label{classPublisher}\index{Publisher@{Publisher}}
+
+
+\mbox{\hyperlink{classPublisher}{Publisher}} class used for sending notifications.  
+
+
+
+
+{\ttfamily \#include $<$Publisher.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPublisher_a5538d94fb8d594575be67e6edd7166df}\label{classPublisher_a5538d94fb8d594575be67e6edd7166df}} 
+\mbox{\hyperlink{classPublisher_a5538d94fb8d594575be67e6edd7166df}{Publisher}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates new \mbox{\hyperlink{classPublisher}{Publisher}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPublisher_a963ffd0ca8f20331c8badfc832a75120}{sub}} (\mbox{\hyperlink{classSubscriber}{Subscriber}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Assigns new value to subscriber. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPublisher_ac9ad2d8d2a02ca42c99abeee88358cfb}\label{classPublisher_ac9ad2d8d2a02ca42c99abeee88358cfb}} 
+void \mbox{\hyperlink{classPublisher_ac9ad2d8d2a02ca42c99abeee88358cfb}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Sends event\+Message to subscriber. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPublisher_a9a5a18c86c9f206b693425198e7fed2a}{set\+Message}} (std\+::string new\+Event)
+\begin{DoxyCompactList}\small\item\em Sets event\+Message of publisher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classPublisher}{Publisher}} class used for sending notifications. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPublisher_a9a5a18c86c9f206b693425198e7fed2a}\label{classPublisher_a9a5a18c86c9f206b693425198e7fed2a}} 
+\index{Publisher@{Publisher}!setMessage@{setMessage}}
+\index{setMessage@{setMessage}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{setMessage()}{setMessage()}}
+{\footnotesize\ttfamily void Publisher\+::set\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Event }\end{DoxyParamCaption})}
+
+
+
+Sets event\+Message of publisher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Event} & New value for event\+Message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPublisher_a963ffd0ca8f20331c8badfc832a75120}\label{classPublisher_a963ffd0ca8f20331c8badfc832a75120}} 
+\index{Publisher@{Publisher}!sub@{sub}}
+\index{sub@{sub}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily void Publisher\+::sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSubscriber}{Subscriber}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Assigns new value to subscriber. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & New subscriber value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/include/Publisher.\+h\item 
+/home/harmo322/csci-\/3081w-\/s23/\+Team-\/001-\/27-\/homework4/libs/transit/src/Publisher.\+cc\end{DoxyCompactItemize}

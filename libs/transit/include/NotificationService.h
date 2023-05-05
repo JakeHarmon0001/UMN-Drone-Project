@@ -9,7 +9,10 @@
 #include "IController.h"
 // using namespace routing;
 
-//Handles receiving messages and relays them from front-end to back-end
+
+/**
+ * @brief Handles receiving messages and relays them from front-end to back-end
+*/
 class NotificationService : public Subscriber {
  public:
  /**

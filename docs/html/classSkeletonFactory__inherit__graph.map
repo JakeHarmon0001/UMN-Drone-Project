@@ -1,0 +1,4 @@
+<map id="SkeletonFactory" name="SkeletonFactory">
+<area shape="rect" id="node1" title="skeleton Factory to produce Skeleton class." alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node2" href="$classIEntityFactory.html" title="Composite Factory Interface." alt="" coords="13,5,125,32"/>
+</map>
