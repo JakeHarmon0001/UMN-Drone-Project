@@ -1,4 +1,9 @@
 # Team-001-27-homework4
+- Jonah Gaskill: gaski051
+- Jacob Harmon: harmo322
+- Gable Sundman: sundm024
+- Coby Vanderwall: vand1787
+
 
 ## What is the project about (overview of the whole project, not just the hw4)?
 This project consists of an uber-like drone system where there are drones which transport robots around the map as scheduled using various movement patterns, while dragons can be introduced to hunt these drones. In this project, there are five types of entities: drones, robots, humans, dragons, and skeletons. The drones are responsible for taking the robots on trips by picking them up and dropping them off via the specified pattern. The robots are entities which are created in the scheduler and get picked up and dropped off by drones. They also specify by which pattern they want to travel. The humans are entities which are completely unrelated to the trip system and randomly run around the map. When introduced, the dragons roam the map randomly and will beeline to a drone in order to eat it when one comes within range, and have a hunger attribute. When the dragons become too hungry, they will die. Thus the skeletons will spawn on the map where the dragons die, in order to show where the dragons have died.
